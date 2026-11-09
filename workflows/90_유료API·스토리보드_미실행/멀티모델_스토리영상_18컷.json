@@ -1,0 +1,9845 @@
+{
+ "id": "b613b59f-a20f-4f8b-bfbe-ab9dfe6e2adc",
+ "revision": 0,
+ "last_node_id": 1247,
+ "last_link_id": 419,
+ "nodes": [
+  {
+   "id": 11,
+   "type": "LoadImage",
+   "pos": [
+    -1804,
+    44
+   ],
+   "size": [
+    528,
+    528
+   ],
+   "flags": {},
+   "order": 4,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      349,
+      351,
+      409
+     ]
+    },
+    {
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "01 Main Reference Image",
+   "properties": {
+    "Node name for S&R": "LoadImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "image"
+   },
+   "widgets_values": [
+    "",
+    "image"
+   ],
+   "color": "#008EB5",
+   "bgcolor": "#125873"
+  },
+  {
+   "id": 58,
+   "type": "PrimitiveInt",
+   "pos": [
+    759,
+    616
+   ],
+   "size": [
+    308,
+    99
+   ],
+   "flags": {
+    "collapsed": false
+   },
+   "order": 3,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "INT",
+     "type": "INT",
+     "links": [
+      316
+     ]
+    }
+   ],
+   "title": "05A Crop Inset For Split A",
+   "properties": {
+    "Node name for S&R": "PrimitiveInt",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "control"
+   },
+   "widgets_values": [
+    0,
+    "fixed"
+   ],
+   "color": "#B37A00",
+   "bgcolor": "#695015"
+  },
+  {
+   "id": 59,
+   "type": "SaveImage",
+   "pos": [
+    1782,
+    44
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {},
+   "order": 36,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 166
+    }
+   ],
+   "outputs": [],
+   "title": "06A Save Action Cut A-01",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_A_cut_01"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 60,
+   "type": "SaveImage",
+   "pos": [
+    2123,
+    44
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {
+    "collapsed": false
+   },
+   "order": 37,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 168
+    }
+   ],
+   "outputs": [],
+   "title": "06A Save Action Cut A-02",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_A_cut_02"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 61,
+   "type": "SaveImage",
+   "pos": [
+    2464,
+    44
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {},
+   "order": 39,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 170
+    }
+   ],
+   "outputs": [],
+   "title": "06A Save Action Cut A-03",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_A_cut_03"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 62,
+   "type": "SaveImage",
+   "pos": [
+    1782,
+    462
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {},
+   "order": 40,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 172
+    }
+   ],
+   "outputs": [],
+   "title": "06A Save Action Cut A-04",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_A_cut_04"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 63,
+   "type": "SaveImage",
+   "pos": [
+    2464,
+    462
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {},
+   "order": 42,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 176
+    }
+   ],
+   "outputs": [],
+   "title": "06A Save Action Cut A-06",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_A_cut_06"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 64,
+   "type": "SaveImage",
+   "pos": [
+    2123,
+    462
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {
+    "collapsed": false
+   },
+   "order": 41,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 175
+    }
+   ],
+   "outputs": [],
+   "title": "06A Save Action Cut A-05",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_A_cut_05"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 65,
+   "type": "SaveImage",
+   "pos": [
+    1782,
+    880
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {},
+   "order": 43,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 178
+    }
+   ],
+   "outputs": [],
+   "title": "06A Save Action Cut A-07",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_A_cut_07"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 66,
+   "type": "SaveImage",
+   "pos": [
+    2123,
+    880
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {
+    "collapsed": false
+   },
+   "order": 44,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 180
+    }
+   ],
+   "outputs": [],
+   "title": "06A Save Action Cut A-08",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_A_cut_08"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 67,
+   "type": "SaveImage",
+   "pos": [
+    2464,
+    880
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {},
+   "order": 45,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 182
+    }
+   ],
+   "outputs": [],
+   "title": "06A Save Action Cut A-09",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_A_cut_09"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 68,
+   "type": "SaveImage",
+   "pos": [
+    759,
+    44
+   ],
+   "size": [
+    407,
+    528
+   ],
+   "flags": {
+    "collapsed": false
+   },
+   "order": 14,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 347
+    }
+   ],
+   "outputs": [],
+   "title": "05A Save Full 3x3 Grid A",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_A_full_3x3_grid"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 94,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    66
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 18,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 317
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      166,
+      412
+     ]
+    }
+   ],
+   "title": "A Route Cut 01",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 95,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    165
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 19,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 318
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      168,
+      414
+     ]
+    }
+   ],
+   "title": "A Route Cut 02",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 96,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    253
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 20,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 319
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      170
+     ]
+    }
+   ],
+   "title": "A Route Cut 03",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 97,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    341
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 21,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 320
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      172
+     ]
+    }
+   ],
+   "title": "A Route Cut 04",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 98,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    429
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 22,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 321
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      175
+     ]
+    }
+   ],
+   "title": "A Route Cut 05",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 99,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    517
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 23,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 322
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      176
+     ]
+    }
+   ],
+   "title": "A Route Cut 06",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 100,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    605
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 24,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 323
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      178
+     ]
+    }
+   ],
+   "title": "A Route Cut 07",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 101,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    704
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 25,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 324
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      180
+     ]
+    }
+   ],
+   "title": "A Route Cut 08",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 102,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    792
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 325
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      182
+     ]
+    }
+   ],
+   "title": "A Route Cut 09",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 146,
+   "type": "c84ec6bc-378b-4486-b782-b8d1072771f1",
+   "pos": [
+    1265,
+    165
+   ],
+   "size": [
+    308,
+    462
+   ],
+   "flags": {},
+   "order": 15,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "image",
+     "type": "IMAGE",
+     "link": 348
+    },
+    {
+     "name": "a",
+     "shape": 7,
+     "type": "INT,FLOAT",
+     "link": 316
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      317
+     ]
+    },
+    {
+     "name": "IMAGE_1",
+     "type": "IMAGE",
+     "links": [
+      318
+     ]
+    },
+    {
+     "name": "IMAGE_2",
+     "type": "IMAGE",
+     "links": [
+      319
+     ]
+    },
+    {
+     "name": "IMAGE_3",
+     "type": "IMAGE",
+     "links": [
+      320
+     ]
+    },
+    {
+     "name": "IMAGE_4",
+     "type": "IMAGE",
+     "links": [
+      321
+     ]
+    },
+    {
+     "name": "IMAGE_5",
+     "type": "IMAGE",
+     "links": [
+      322
+     ]
+    },
+    {
+     "name": "IMAGE_6",
+     "type": "IMAGE",
+     "links": [
+      323
+     ]
+    },
+    {
+     "name": "IMAGE_7",
+     "type": "IMAGE",
+     "links": [
+      324
+     ]
+    },
+    {
+     "name": "IMAGE_8",
+     "type": "IMAGE",
+     "links": [
+      325
+     ]
+    }
+   ],
+   "title": "05A Split Grid A Into 9 Cuts",
+   "properties": {
+    "proxyWidgets": [],
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "widgets_values": [],
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 147,
+   "type": "GeminiNanoBanana2V2",
+   "pos": [
+    165,
+    1496
+   ],
+   "size": [
+    462,
+    726
+   ],
+   "flags": {},
+   "order": 10,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "model.images.image_1",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 351,
+     "localized_name": "model.images.image_1"
+    },
+    {
+     "name": "model.files",
+     "shape": 7,
+     "type": "GEMINI_INPUT_FILES",
+     "link": null,
+     "localized_name": "model.files"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      346,
+      350
+     ]
+    },
+    {
+     "name": "STRING",
+     "type": "STRING",
+     "links": null
+    },
+    {
+     "name": "thought_image",
+     "type": "IMAGE",
+     "links": null
+    }
+   ],
+   "title": "04B Gemini 3x3 Drama/Action Storyboard B",
+   "properties": {
+    "Node name for S&R": "GeminiNanoBanana2V2",
+    "studio_provider": "Google",
+    "studio_role": "process"
+   },
+   "widgets_values": [
+    "Create a photoreal cinematic drama storyboard sequence based entirely on the reference image.\n\nCRITICAL:\n\nUse the EXACT environment, background, lighting, and perspective from the reference image.\n\nThe reference image must be used as the base frame.\n\nThe main subject from the reference image must remain identical.\n\nMaintain identical:\n\nface,\nidentity,\noutfit,\nhairstyle,\nbody proportions,\naccessories,\nand visual details.\n\nNo additional people.\n\nNo clones.\n\nNo duplicates.\n\nAll frames must feel like moments extracted from one continuous cinematic drama scene.\n\nThe environment remains identical throughout all frames.\n\nOnly camera angle, facial expression, body pose, and emotional progression may change.\n\nGenerate as a seamless 3×3 storyboard grid.\n\nCORE IDEA:\n\nA dramatic emotional sequence.\n\nThe subject experiences an internal emotional journey.\n\nThe story progresses through:\n\nreflection →\nuncertainty →\nrealization →\ndetermination →\nacceptance.\n\nFRAME 01\n\nWide establishing shot.\n\nSubject standing still.\n\nQuiet atmosphere.\n\nEmotion restrained.\n\nFRAME 02\n\nExtreme close-up of eyes.\n\nThoughtful expression.\n\nSubtle emotional tension.\n\nNatural reflections.\n\nFRAME 03\n\nMedium profile shot.\n\nSubject slowly turning.\n\nLooking toward something unseen.\n\nSense of curiosity.\n\nFRAME 04\n\nClose-up of hands.\n\nHands tightening slightly.\n\nSubtle nervous energy.\n\nFabric movement.\n\nFRAME 05\n\nFront-facing medium shot.\n\nEmotional breakthrough moment.\n\nEyes filled with determination.\n\nAtmosphere intensifies.\n\nFRAME 06\n\nExtreme close-up of face.\n\nMicro facial movements.\n\nBreathing visible.\n\nStrong cinematic emotion.\n\nFRAME 07\n\nSide-angle tracking shot.\n\nSubject walking forward.\n\nPurposeful movement.\n\nDetermined expression.\n\nFRAME 08\n\nLow-angle hero shot.\n\nSubject pauses.\n\nWind interacting with clothing and hair.\n\nPowerful visual presence.\n\nFRAME 09\n\nFront-facing final hero shot.\n\nSubject completely still.\n\nEmotion resolved.\n\nQuiet confidence.\n\nA feeling of closure.\n\nCAMERA\n\nARRI Alexa 35.\n\nAnamorphic lens.\n\nCinematic drama photography.\n\nNatural handheld movement.\n\nSlow push-ins.\n\nSubtle tracking shots.\n\nIntimate close-ups.\n\nEmotional framing.\n\nSTYLE\n\nUltra realistic.\n\nPremium feature film.\n\nHollywood drama.\n\nPhotorealistic skin texture.\n\nNatural lighting.\n\nSubtle film grain.\n\nShallow depth of field.\n\nAtmospheric realism.\n\nIMPORTANT:\n\nNO TEXT.\n\nNO LETTERS.\n\nNO NUMBERS.\n\nNO TITLES.\n\nNO CAPTIONS.\n\nNO STORYBOARD LABELS.\n\nNO UI ELEMENTS.\n\nNO GRAPHIC DESIGN.\n\nNO WATERMARK.\n\nONLY PURE CINEMATIC IMAGERY.\n\nThe final 3×3 grid should feel like nine frames extracted from a $300 million Hollywood drama film.\n",
+    "Nano Banana 2 (Gemini 3.1 Flash Image)",
+    "16:9",
+    "2K",
+    "MINIMAL",
+    1121589355657661,
+    "randomize",
+    "IMAGE",
+    "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+    1.0,
+    0.95
+   ],
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 180,
+   "type": "SaveImage",
+   "pos": [
+    1782,
+    2343
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {},
+   "order": 52,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 327
+    }
+   ],
+   "outputs": [],
+   "title": "06B Save Action Cut B-07",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_B_cut_07"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 181,
+   "type": "SaveImage",
+   "pos": [
+    1782,
+    1925
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {},
+   "order": 49,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 328
+    }
+   ],
+   "outputs": [],
+   "title": "06B Save Action Cut B-04",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_B_cut_04"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 182,
+   "type": "SaveImage",
+   "pos": [
+    1782,
+    1496
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {},
+   "order": 46,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 329
+    }
+   ],
+   "outputs": [],
+   "title": "06B Save Action Cut B-01",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_B_cut_01"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 183,
+   "type": "SaveImage",
+   "pos": [
+    2123,
+    1496
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {
+    "collapsed": false
+   },
+   "order": 47,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 330
+    }
+   ],
+   "outputs": [],
+   "title": "06B Save Action Cut B-02",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_B_cut_02"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 184,
+   "type": "SaveImage",
+   "pos": [
+    2464,
+    1496
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {},
+   "order": 48,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 331
+    }
+   ],
+   "outputs": [],
+   "title": "06B Save Action Cut B-03",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_B_cut_03"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 185,
+   "type": "SaveImage",
+   "pos": [
+    2123,
+    1925
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {
+    "collapsed": false
+   },
+   "order": 50,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 332
+    }
+   ],
+   "outputs": [],
+   "title": "06B Save Action Cut B-05",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_B_cut_05"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 186,
+   "type": "SaveImage",
+   "pos": [
+    2464,
+    1925
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {},
+   "order": 51,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 333
+    }
+   ],
+   "outputs": [],
+   "title": "06B Save Action Cut B-06",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_B_cut_06"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 187,
+   "type": "SaveImage",
+   "pos": [
+    2123,
+    2343
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {
+    "collapsed": false
+   },
+   "order": 53,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 334
+    }
+   ],
+   "outputs": [],
+   "title": "06B Save Action Cut B-08",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_B_cut_08"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 188,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    1804
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 30,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 335
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      328
+     ]
+    }
+   ],
+   "title": "B Route Cut 04",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 189,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    2068
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 33,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 336
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      327
+     ]
+    }
+   ],
+   "title": "B Route Cut 07",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 190,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    2156
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 34,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 337
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      334
+     ]
+    }
+   ],
+   "title": "B Route Cut 08",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 191,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    2255
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 35,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 338
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      344
+     ]
+    }
+   ],
+   "title": "B Route Cut 09",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 192,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    1980
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 32,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 339
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      333
+     ]
+    }
+   ],
+   "title": "B Route Cut 06",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 193,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    1892
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 31,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 340
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      332
+     ]
+    }
+   ],
+   "title": "B Route Cut 05",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 194,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    1617
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 28,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 341
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      330
+     ]
+    }
+   ],
+   "title": "B Route Cut 02",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 195,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    1705
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 29,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 342
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      331
+     ]
+    }
+   ],
+   "title": "B Route Cut 03",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 196,
+   "type": "Reroute",
+   "pos": [
+    1639,
+    1529
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 27,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 343
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      329
+     ]
+    }
+   ],
+   "title": "B Route Cut 01",
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 197,
+   "type": "SaveImage",
+   "pos": [
+    2464,
+    2343
+   ],
+   "size": [
+    286,
+    363
+   ],
+   "flags": {},
+   "order": 54,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 344
+    }
+   ],
+   "outputs": [],
+   "title": "06B Save Action Cut B-09",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_B_cut_09"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 198,
+   "type": "SaveImage",
+   "pos": [
+    759,
+    1496
+   ],
+   "size": [
+    407,
+    528
+   ],
+   "flags": {
+    "collapsed": false
+   },
+   "order": 17,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 350
+    }
+   ],
+   "outputs": [],
+   "title": "05B Save Full 3x3 Grid B",
+   "properties": {
+    "Node name for S&R": "SaveImage",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "action_B_full_3x3_grid"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 199,
+   "type": "2cfc1b51-1ea0-4f9e-9b1a-203c50e2f188",
+   "pos": [
+    1265,
+    1628
+   ],
+   "size": [
+    308,
+    462
+   ],
+   "flags": {},
+   "order": 16,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "image",
+     "type": "IMAGE",
+     "link": 346
+    },
+    {
+     "name": "a",
+     "shape": 7,
+     "type": "INT,FLOAT",
+     "link": 345
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      343
+     ]
+    },
+    {
+     "name": "IMAGE_1",
+     "type": "IMAGE",
+     "links": [
+      341
+     ]
+    },
+    {
+     "name": "IMAGE_2",
+     "type": "IMAGE",
+     "links": [
+      342
+     ]
+    },
+    {
+     "name": "IMAGE_3",
+     "type": "IMAGE",
+     "links": [
+      335
+     ]
+    },
+    {
+     "name": "IMAGE_4",
+     "type": "IMAGE",
+     "links": [
+      340
+     ]
+    },
+    {
+     "name": "IMAGE_5",
+     "type": "IMAGE",
+     "links": [
+      339
+     ]
+    },
+    {
+     "name": "IMAGE_6",
+     "type": "IMAGE",
+     "links": [
+      336
+     ]
+    },
+    {
+     "name": "IMAGE_7",
+     "type": "IMAGE",
+     "links": [
+      337
+     ]
+    },
+    {
+     "name": "IMAGE_8",
+     "type": "IMAGE",
+     "links": [
+      338
+     ]
+    }
+   ],
+   "title": "05B Split Grid B Into 9 Cuts",
+   "properties": {
+    "proxyWidgets": [],
+    "studio_provider": "Local / Utility",
+    "studio_role": "process"
+   },
+   "widgets_values": [],
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 200,
+   "type": "PrimitiveInt",
+   "pos": [
+    759,
+    2079
+   ],
+   "size": [
+    308,
+    99
+   ],
+   "flags": {
+    "collapsed": false
+   },
+   "order": 0,
+   "mode": 2,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "INT",
+     "type": "INT",
+     "links": [
+      345
+     ]
+    }
+   ],
+   "title": "05B Crop Inset For Split B",
+   "properties": {
+    "Node name for S&R": "PrimitiveInt",
+    "cnr_id": "comfy-core",
+    "ver": "0.3.76",
+    "studio_provider": "Local / Utility",
+    "studio_role": "control"
+   },
+   "widgets_values": [
+    0,
+    "fixed"
+   ],
+   "color": "#B37A00",
+   "bgcolor": "#695015"
+  },
+  {
+   "id": 201,
+   "type": "GeminiNanoBanana2V2",
+   "pos": [
+    165,
+    44
+   ],
+   "size": [
+    462,
+    726
+   ],
+   "flags": {},
+   "order": 9,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model.images.image_1",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 349,
+     "localized_name": "model.images.image_1"
+    },
+    {
+     "name": "model.files",
+     "shape": 7,
+     "type": "GEMINI_INPUT_FILES",
+     "link": null,
+     "localized_name": "model.files"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      347,
+      348,
+      413
+     ]
+    },
+    {
+     "name": "STRING",
+     "type": "STRING",
+     "links": null
+    },
+    {
+     "name": "thought_image",
+     "type": "IMAGE",
+     "links": null
+    }
+   ],
+   "title": "04A Gemini 3x3 Action MV Storyboard A",
+   "properties": {
+    "Node name for S&R": "GeminiNanoBanana2V2",
+    "studio_provider": "Google",
+    "studio_role": "process"
+   },
+   "widgets_values": [
+    "Create a photoreal cinematic multi-angle music video storyboard sequence based entirely on the reference image.\n\nCRITICAL:\n\nUse the EXACT environment, background, lighting, and perspective from the reference image.\n\nThe reference image must be used as the base frame.\n\nThe main subject from the reference image must remain identical.\n\nMaintain identical:\n\nface,\nidentity,\noutfit,\nhairstyle,\nbody proportions,\naccessories,\nand visual details.\n\nNo additional people.\n\nNo clones.\n\nNo duplicates.\n\nAll shots must feel connected as one continuous music video sequence.\n\nThe environment remains identical throughout all shots.\n\nOnly camera angle, body pose, motion, and insert details may change.\n\nGenerate as a seamless 3×3 storyboard grid.\n\nCORE IDEA:\n\nHigh-end cinematic music video.\n\nThe subject performs an emotional choreography sequence while cinematic insert shots are intercut between performance moments.\n\nMovement progression:\n\nanticipation →\nbuild →\nperformance →\npeak →\nresolution.\n\nFRAME 01\n\nWide hero shot.\n\nSubject standing still.\n\nCalm energy.\n\nAtmosphere building.\n\nFRAME 02\n\nExtreme close-up of eyes.\n\nNatural reflections.\n\nEmotional tension building.\n\nFRAME 03\n\nLow-angle tracking shot.\n\nSubject begins choreography.\n\nHair movement.\n\nBody rotation.\n\nFRAME 04\n\nExtreme close-up of hands.\n\nAccessories.\n\nFabric movement.\n\nLuxury editorial aesthetic.\n\nFRAME 05\n\nDynamic dutch-angle shot.\n\nPeak choreography moment.\n\nStrong body movement.\n\nMotion blur trails.\n\nFRAME 06\n\nExtreme close-up of lips, neck, and accessories.\n\nMicro facial movement.\n\nFashion-commercial quality.\n\nFRAME 07\n\nSide-angle performance shot.\n\nFast rotation.\n\nHair whipping through frame.\n\nStrong silhouette.\n\nFRAME 08\n\nExtreme close-up of boots and footwork.\n\nGround interaction.\n\nFabric movement.\n\nAtmospheric particles.\n\nFRAME 09\n\nFront-facing hero shot.\n\nPowerful ending pose.\n\nSubject stabilizes.\n\nCAMERA\n\nARRI Alexa 35.\n\nAnamorphic lens distortion.\n\nEditorial music video cinematography.\n\nHandheld energy.\n\nCrash zooms.\n\nOrbit shots.\n\nTracking shots.\n\nDutch angles.\n\nExtreme close-ups.\n\nSTYLE\n\nUltra realistic.\n\nLuxury K-pop music video.\n\nHigh-end fashion editorial.\n\nPhotorealistic skin.\n\nPremium commercial quality.\n\nSubtle motion blur.\n\nAtmospheric particles.\n\nIMPORTANT:\n\nNO TEXT.\n\nNO LETTERS.\n\nNO NUMBERS.\n\nNO TITLES.\n\nNO CAPTIONS.\n\nNO LABELS.\n\nNO GRAPHIC DESIGN ELEMENTS.\n\nNO STORYBOARD LABELS.\n\nNO FRAME NUMBERS.\n\nNO WATERMARK.\n\nNO LOGO.\n\nNO MAGAZINE TEXT.\n\nNO POSTER TEXT.\n\nNO UI ELEMENTS.\n\nNO WORDS OF ANY KIND.\n\nThe final result must contain ONLY imagery.\n\nThe 3×3 grid should feel like nine frames extracted from a $300 million blockbuster music video.\n",
+    "Nano Banana 2 (Gemini 3.1 Flash Image)",
+    "16:9",
+    "2K",
+    "MINIMAL",
+    904644912826031,
+    "randomize",
+    "IMAGE",
+    "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+    1.0,
+    0.95
+   ],
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 202,
+   "type": "OpenAIGPTImageNodeV2",
+   "pos": [
+    -957,
+    561
+   ],
+   "size": [
+    440,
+    454.65625
+   ],
+   "flags": {},
+   "order": 6,
+   "mode": 2,
+   "inputs": [
+    {
+     "label": "image_1",
+     "name": "model.images.image_1",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 352
+    },
+    {
+     "label": "image_2",
+     "name": "model.images.image_2",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 353
+    },
+    {
+     "label": "image_3",
+     "name": "model.images.image_3",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "label": "mask",
+     "name": "model.mask",
+     "shape": 7,
+     "type": "MASK",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      356
+     ]
+    }
+   ],
+   "title": "03B OpenAI GPT Image Candidate",
+   "properties": {
+    "Node name for S&R": "OpenAIGPTImageNodeV2",
+    "studio_provider": "OpenAI",
+    "studio_role": "process"
+   },
+   "widgets_values": [
+    "이미지의 여성이 라면을 먹는 정면구도 ,지저분한 방안, ",
+    "gpt-image-2.5-sunburst",
+    "Custom",
+    1920,
+    1088,
+    "auto",
+    "low",
+    1,
+    1615565558,
+    "randomize"
+   ],
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 204,
+   "type": "GeminiNanoBanana2V2",
+   "pos": [
+    -957,
+    1078
+   ],
+   "size": [
+    440,
+    461.3125
+   ],
+   "flags": {},
+   "order": 7,
+   "mode": 2,
+   "inputs": [
+    {
+     "label": "image_1",
+     "name": "model.images.image_1",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 354
+    },
+    {
+     "label": "image_2",
+     "name": "model.images.image_2",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 355
+    },
+    {
+     "label": "image_3",
+     "name": "model.images.image_3",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "label": "files",
+     "name": "model.files",
+     "shape": 7,
+     "type": "GEMINI_INPUT_FILES",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      357
+     ]
+    },
+    {
+     "name": "STRING",
+     "type": "STRING",
+     "links": null
+    },
+    {
+     "name": "thought_image",
+     "type": "IMAGE",
+     "links": null
+    }
+   ],
+   "title": "03C Gemini V2 Candidate",
+   "properties": {
+    "Node name for S&R": "GeminiNanoBanana2V2",
+    "studio_provider": "Google",
+    "studio_role": "process"
+   },
+   "widgets_values": [
+    "이미지의 여성이 라면을 먹는 정면구도 ,지저분한 방안, ",
+    "Nano Banana 2 (Gemini 3.1 Flash Image)",
+    "auto",
+    "1K",
+    "MINIMAL",
+    413445228072769,
+    "randomize",
+    "IMAGE",
+    "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+   ],
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 205,
+   "type": "LoadImage",
+   "pos": [
+    -1441,
+    682
+   ],
+   "size": [
+    330,
+    372
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      352,
+      354,
+      360,
+      411
+     ]
+    },
+    {
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "02 Extra Reference B",
+   "properties": {
+    "Node name for S&R": "LoadImage",
+    "studio_provider": "Local / Utility",
+    "studio_role": "image"
+   },
+   "widgets_values": [
+    "",
+    "image"
+   ],
+   "color": "#008EB5",
+   "bgcolor": "#125873"
+  },
+  {
+   "id": 206,
+   "type": "LoadImage",
+   "pos": [
+    -1804,
+    682
+   ],
+   "size": [
+    330,
+    372
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      353,
+      355,
+      359,
+      410
+     ]
+    },
+    {
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "02 Extra Reference A",
+   "properties": {
+    "Node name for S&R": "LoadImage",
+    "studio_provider": "Local / Utility",
+    "studio_role": "image"
+   },
+   "widgets_values": [
+    "",
+    "image"
+   ],
+   "color": "#008EB5",
+   "bgcolor": "#125873"
+  },
+  {
+   "id": 207,
+   "type": "SaveImage",
+   "pos": [
+    -440,
+    561
+   ],
+   "size": [
+    528,
+    429
+   ],
+   "flags": {},
+   "order": 11,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 356
+    }
+   ],
+   "outputs": [],
+   "title": "03B Save OpenAI Candidate",
+   "properties": {
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "candidate_openai_action"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 208,
+   "type": "SaveImage",
+   "pos": [
+    -440,
+    1078
+   ],
+   "size": [
+    528,
+    429
+   ],
+   "flags": {},
+   "order": 12,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 357
+    }
+   ],
+   "outputs": [],
+   "title": "03C Save Gemini V2 Candidate",
+   "properties": {
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "candidate_gemini_v2_action"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 210,
+   "type": "GrokImageEditNodeV2",
+   "pos": [
+    -957,
+    44
+   ],
+   "size": [
+    440,
+    331.984375
+   ],
+   "flags": {},
+   "order": 8,
+   "mode": 2,
+   "inputs": [
+    {
+     "label": "image_1",
+     "name": "model.images.image_1",
+     "type": "IMAGE",
+     "link": 359
+    },
+    {
+     "label": "image_2",
+     "name": "model.images.image_2",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 360
+    },
+    {
+     "label": "image_3",
+     "name": "model.images.image_3",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      361
+     ]
+    }
+   ],
+   "title": "03A Grok Image Edit Candidate",
+   "properties": {
+    "Node name for S&R": "GrokImageEditNodeV2",
+    "studio_provider": "Grok",
+    "studio_role": "process"
+   },
+   "widgets_values": [
+    "이미지의 여성이 라면을 먹는 정면구도 ,지저분한 방안, ",
+    "grok-imagine-image-quality",
+    "1K",
+    1,
+    "16:9",
+    768775174,
+    "randomize"
+   ],
+   "color": "#237DCC",
+   "bgcolor": "#244D78"
+  },
+  {
+   "id": 211,
+   "type": "SaveImage",
+   "pos": [
+    -440,
+    44
+   ],
+   "size": [
+    528,
+    440
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 2,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 361
+    }
+   ],
+   "outputs": [],
+   "title": "03A Save Grok Candidate",
+   "properties": {
+    "studio_provider": "Local / Utility",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "candidate_grok_action"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829"
+  },
+  {
+   "id": 244,
+   "type": "ByteDance2ReferenceNodeV2",
+   "pos": [
+    2959,
+    495
+   ],
+   "size": [
+    484,
+    611.984375
+   ],
+   "flags": {},
+   "order": 38,
+   "mode": 0,
+   "inputs": [
+    {
+     "label": "image_1",
+     "name": "model.reference_images.image_1",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 409
+    },
+    {
+     "label": "image_2",
+     "name": "model.reference_images.image_2",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 410
+    },
+    {
+     "label": "image_3",
+     "name": "model.reference_images.image_3",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 411
+    },
+    {
+     "label": "image_4",
+     "name": "model.reference_images.image_4",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 412
+    },
+    {
+     "label": "image_5",
+     "name": "model.reference_images.image_5",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 413
+    },
+    {
+     "label": "image_6",
+     "name": "model.reference_images.image_6",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 414
+    },
+    {
+     "label": "image_7",
+     "name": "model.reference_images.image_7",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "label": "video_1",
+     "name": "model.reference_videos.video_1",
+     "shape": 7,
+     "type": "VIDEO",
+     "link": null
+    },
+    {
+     "label": "audio_1",
+     "name": "model.reference_audios.audio_1",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    },
+    {
+     "label": "asset_1",
+     "name": "model.reference_assets.asset_1",
+     "shape": 7,
+     "type": "STRING",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "VIDEO",
+     "type": "VIDEO",
+     "links": [
+      415
+     ]
+    }
+   ],
+   "title": "Seedance 2.5 · 레퍼런스 영상 생성",
+   "properties": {
+    "Node name for S&R": "ByteDance2ReferenceNodeV2",
+    "studio_provider": "ByteDance",
+    "studio_role": "control"
+   },
+   "widgets_values": [
+    "Seedance 2.5",
+    "15-SECOND CINEMATIC CHARACTER FILM\n\nUse the exact woman from the reference image.\n\nMaintain identical:\nface,\neyes,\nfreckles,\nhairstyle,\nmessy bangs,\nblack hair,\nblue sleeveless top,\npiercings,\ntattoos,\nboots,\nroom,\nlighting,\nand overall appearance throughout all shots.\n\nSTYLE:\n\nIntimate character study.\nIndie film.\nCinematic realism.\nARRI Alexa 35.\n85mm and 50mm lenses.\nShallow depth of field.\nSoft practical lamp lighting.\nMessy bedroom.\nRaw youth culture.\nSubtle cigarette smoke.\nNatural handheld movement.\nFilm grain.\nWarm tungsten tones.\nNo subtitles.\nNo music.\n\nSHOT 01 (0:00–0:02)\n\nMedium shot.\n\nThe woman sits quietly on the edge of her bed.\n\nHolding a cigarette.\n\nSmoke slowly rises.\n\nThe room feels cluttered and lived-in.\n\nSoft lamp glows behind her.\n\nSHOT 02 (0:02–0:04)\n\nExtreme close-up.\n\nHer eyes fill the frame.\n\nTiny freckles visible.\n\nA subtle blink.\n\nReflections of the room lights shimmer in her pupils.\n\nVery shallow depth of field.\n\nSHOT 03 (0:04–0:05)\n\nClose-up of her hand.\n\nSilver rings.\n\nCigarette between her fingers.\n\nThin smoke drifting upward.\n\nNatural handheld camera movement.\n\nSHOT 04 (0:05–0:07)\n\nMedium shot.\n\nShe suddenly turns her body.\n\nHair swings across her face.\n\nThe camera reacts slightly late as if captured documentary-style.\n\nSHOT 05 (0:07–0:09)\n\nClose-up.\n\nHer lips.\n\nExhaling smoke slowly.\n\nSoft haze passes in front of the lens.\n\nBackground melts into bokeh.\n\nSHOT 06 (0:09–0:11)\n\nProfile shot.\n\nShe looks away from camera.\n\nLost in thought.\n\nThe messy room remains softly visible behind her.\n\nWarm lamp light wraps around her face.\n\nSHOT 07 (0:11–0:13)\n\nLow angle shot.\n\nHeavy black boots step across the floor.\n\nSlow deliberate movement.\n\nDust particles visible in the warm light.\n\nSHOT 08 (0:13–0:15)\n\nHero portrait.\n\nShe sits back down and looks directly into the camera.\n\nSmoke drifts through the frame.\n\nThe room falls silent.\n\nA long unbroken stare.\n\nFade to black.",
+    "480p",
+    "adaptive",
+    15,
+    true,
+    "auto",
+    "mp4",
+    false,
+    false,
+    1827732076,
+    "randomize",
+    false
+   ],
+   "color": "#B37A00",
+   "bgcolor": "#695015"
+  },
+  {
+   "id": 246,
+   "type": "SaveVideo",
+   "pos": [
+    3597,
+    495
+   ],
+   "size": [
+    704,
+    627
+   ],
+   "flags": {},
+   "order": 55,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "video",
+     "type": "VIDEO",
+     "link": 415
+    }
+   ],
+   "outputs": [],
+   "title": "08 Save Seedance Final Video",
+   "properties": {
+    "studio_provider": "ByteDance",
+    "studio_role": "output"
+   },
+   "widgets_values": [
+    "video/action_18cut_seedance_final",
+    "mp4",
+    "h264",
+    "re-encode",
+    18,
+    "auto"
+   ],
+   "color": "#318A34",
+   "bgcolor": "#285829",
+   "widgets_values_named": {
+    "filename_prefix": "video/action_18cut_seedance_final",
+    "format": "mp4",
+    "format.codec": "h264",
+    "format.codec.encoding": "re-encode",
+    "format.codec.encoding.crf": 18,
+    "codec": "auto"
+   }
+  },
+  {
+   "id": 1246,
+   "type": "Note",
+   "pos": [
+    -1804,
+    -517
+   ],
+   "size": [
+    990,
+    363
+   ],
+   "flags": {},
+   "order": 5,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "00 사용방법 - Multi-Angle Action 18-Cut Pipeline · 기본 실행 A 9컷",
+   "properties": {
+    "studio_provider": "Local / Utility",
+    "studio_role": "note"
+   },
+   "widgets_values": [
+    "Multi-Angle Action 18-Cut Pipeline - Clean Layout (기본 실행 A 9컷 · B 9컷은 음소거)\n\n사용 순서\n1. 01 Main Reference Image에 주 기준 이미지를 넣습니다. 이 이미지는 Gemini A/B와 Seedance 영상의 핵심 레퍼런스입니다.\n2. 02 Extra Reference A/B는 편집 후보 생성과 Seedance 보조 레퍼런스로 사용됩니다. 두 칸 모두 이미지를 넣으세요. 안 쓰려면 Seedance #244의 image_2 · image_3 연결을 끊으세요.\n3. 왼쪽 후보 생성 구역에서 Grok / OpenAI / Gemini V2 결과를 비교 저장합니다. 이 구역은 선택 후보용이며 18컷 분할의 직접 입력은 아닙니다.\n4. 04A Gemini Action Storyboard A가 첫 번째 3x3 액션 스토리보드를 만듭니다. Save Full Grid A와 Cut A-01~A-09가 저장됩니다.\n5. 04B Gemini Drama/Action Storyboard B가 두 번째 3x3 스토리보드를 만듭니다. Save Full Grid B와 Cut B-01~B-09가 저장됩니다.\n6. 07 Seedance / ByteDance Video는 메인 이미지, 보조 이미지, A컷 일부를 레퍼런스로 받아 최종 영상을 생성합니다.\n7. 프롬프트를 바꿀 때는 Gemini A/B 노드와 Seedance 노드의 프롬프트를 우선 수정하세요. Split / Save 노드는 건드리지 않는 것이 안전합니다.\n\n출력: 후보 이미지 3종, A 9컷, B 9컷, 전체 3x3 그리드 2장, Seedance 최종 영상.\n\n────────────────────\n⚠ 검토 추가 안내 (2026-11-07 개정 · 정적 검토, 실행·유료 호출 안 함)\n· 위 '출력' 줄은 모든 노드를 켰을 때 기준입니다. 지금 기본 상태에서 실행 대상인 것은 A 그리드 1장 + A 9컷 + Seedance 영상입니다. B 경로(04B #147 · 05B 분할)와 후보 3종(03A Grok #210 · 03B OpenAI #202 · 03C Gemini V2 #204)은 음소거(mode 2) 상태입니다.\n· 2번 참고: Extra Reference A/B(#206 · #205)는 Seedance #244의 image_2 · image_3에 연결돼 있어, 이미지 슬롯을 비우면 LoadImage 검증에서 실패하고 Seedance 출력이 빠집니다. 이때도 Gemini A #201은 입력과 계정이 유효하면 실행·과금될 수 있습니다. 안 쓰려면 #244의 image_2 · image_3 연결을 끊으세요.\n· 이 파일에는 참조 이미지가 들어 있지 않습니다(#11 · #205 · #206은 해시 이름 png만 지정). 그 파일이 ComfyUI input 폴더에 없으면 연결된 출력이 입력 검증에서 빠집니다. 실제 실행·과금 여부는 입력 파일, 계정 자격, 서비스 쪽 검증에 달려 있습니다.\n· Queue 1회에 켜져 있는 유료 노드가 함께 실행·과금될 수 있습니다(입력 파일·계정·서비스 검증이 모두 통과할 때). 기본 상태 조건부 추정: Gemini A #201(2K) 약 $0.1217 + Seedance #244(480p · 15초) 약 $2.21 = 약 $2.33 (모든 호출 성공 가정).\n· 음소거를 풀면 같은 Queue에 더해질 수 있습니다: Gemini B #147(2K) 약 $0.1217 · Gemini V2 #204(1K) 약 $0.0835 · OpenAI #202 약 $0.026–0.064 · Grok #210 약 $0.06–0.08 → 전부 켜고 모두 성공하면 약 $2.62–2.68.\n· 후보·스토리보드만 볼 때는 Seedance #244와 저장 노드 #246을 함께 선택해 Ctrl+M(음소거)으로 끄세요. 추정 비용의 대부분이 Seedance입니다.\n· 금액은 ComfyUI 소스(c85957a) 가격식으로 계산한 조건부 추정치이며 청구액이 아닙니다. 실행 전 노드 가격 배지와 계정 크레딧을 확인하세요."
+   ],
+   "color": "#9A6D3B",
+   "bgcolor": "#55422E"
+  },
+  {
+   "id": 1247,
+   "type": "MarkdownNote",
+   "title": "2026-11-07 · 이번 수정 및 검증 범위",
+   "pos": [
+    -1804,
+    -1027
+   ],
+   "size": [
+    920,
+    450
+   ],
+   "flags": {},
+   "order": 56,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {
+    "Node name for S&R": "MarkdownNote",
+    "cnr_id": "comfy-core"
+   },
+   "widgets_values": [
+    "## 이번 수정본\n- 영상 저장 설정 1곳 정규화: 일반 MP4 H.264 CRF18, 기존 CRF16/ProRes 유지. 배열·이름 저장값 동기화.\n\n검증: JSON·연결·서브그래프 제어값 정적 검사. 이 파일의 GPU 생성·속도·화질 A/B는 미실행. 원문 안내에 적힌 과거 실행 성공/초 단위 수치는 이번 검증 결과가 아닙니다.\n\nRTX PRO 6000도 긴 영상 전체 처리에서는 RAM/VRAM 부담이 큽니다. 1개 짧은 샷부터 확인하세요. 미리보기·추가 출력은 필요한 것만 실행하세요."
+   ]
+  }
+ ],
+ "links": [
+  [
+   166,
+   94,
+   0,
+   59,
+   0,
+   "IMAGE"
+  ],
+  [
+   168,
+   95,
+   0,
+   60,
+   0,
+   "IMAGE"
+  ],
+  [
+   170,
+   96,
+   0,
+   61,
+   0,
+   "IMAGE"
+  ],
+  [
+   172,
+   97,
+   0,
+   62,
+   0,
+   "IMAGE"
+  ],
+  [
+   175,
+   98,
+   0,
+   64,
+   0,
+   "IMAGE"
+  ],
+  [
+   176,
+   99,
+   0,
+   63,
+   0,
+   "IMAGE"
+  ],
+  [
+   178,
+   100,
+   0,
+   65,
+   0,
+   "IMAGE"
+  ],
+  [
+   180,
+   101,
+   0,
+   66,
+   0,
+   "IMAGE"
+  ],
+  [
+   182,
+   102,
+   0,
+   67,
+   0,
+   "IMAGE"
+  ],
+  [
+   316,
+   58,
+   0,
+   146,
+   1,
+   "INT"
+  ],
+  [
+   317,
+   146,
+   0,
+   94,
+   0,
+   "IMAGE"
+  ],
+  [
+   318,
+   146,
+   1,
+   95,
+   0,
+   "IMAGE"
+  ],
+  [
+   319,
+   146,
+   2,
+   96,
+   0,
+   "IMAGE"
+  ],
+  [
+   320,
+   146,
+   3,
+   97,
+   0,
+   "IMAGE"
+  ],
+  [
+   321,
+   146,
+   4,
+   98,
+   0,
+   "IMAGE"
+  ],
+  [
+   322,
+   146,
+   5,
+   99,
+   0,
+   "IMAGE"
+  ],
+  [
+   323,
+   146,
+   6,
+   100,
+   0,
+   "IMAGE"
+  ],
+  [
+   324,
+   146,
+   7,
+   101,
+   0,
+   "IMAGE"
+  ],
+  [
+   325,
+   146,
+   8,
+   102,
+   0,
+   "IMAGE"
+  ],
+  [
+   327,
+   189,
+   0,
+   180,
+   0,
+   "IMAGE"
+  ],
+  [
+   328,
+   188,
+   0,
+   181,
+   0,
+   "IMAGE"
+  ],
+  [
+   329,
+   196,
+   0,
+   182,
+   0,
+   "IMAGE"
+  ],
+  [
+   330,
+   194,
+   0,
+   183,
+   0,
+   "IMAGE"
+  ],
+  [
+   331,
+   195,
+   0,
+   184,
+   0,
+   "IMAGE"
+  ],
+  [
+   332,
+   193,
+   0,
+   185,
+   0,
+   "IMAGE"
+  ],
+  [
+   333,
+   192,
+   0,
+   186,
+   0,
+   "IMAGE"
+  ],
+  [
+   334,
+   190,
+   0,
+   187,
+   0,
+   "IMAGE"
+  ],
+  [
+   335,
+   199,
+   3,
+   188,
+   0,
+   "IMAGE"
+  ],
+  [
+   336,
+   199,
+   6,
+   189,
+   0,
+   "IMAGE"
+  ],
+  [
+   337,
+   199,
+   7,
+   190,
+   0,
+   "IMAGE"
+  ],
+  [
+   338,
+   199,
+   8,
+   191,
+   0,
+   "IMAGE"
+  ],
+  [
+   339,
+   199,
+   5,
+   192,
+   0,
+   "IMAGE"
+  ],
+  [
+   340,
+   199,
+   4,
+   193,
+   0,
+   "IMAGE"
+  ],
+  [
+   341,
+   199,
+   1,
+   194,
+   0,
+   "IMAGE"
+  ],
+  [
+   342,
+   199,
+   2,
+   195,
+   0,
+   "IMAGE"
+  ],
+  [
+   343,
+   199,
+   0,
+   196,
+   0,
+   "IMAGE"
+  ],
+  [
+   344,
+   191,
+   0,
+   197,
+   0,
+   "IMAGE"
+  ],
+  [
+   345,
+   200,
+   0,
+   199,
+   1,
+   "INT"
+  ],
+  [
+   346,
+   147,
+   0,
+   199,
+   0,
+   "IMAGE"
+  ],
+  [
+   347,
+   201,
+   0,
+   68,
+   0,
+   "IMAGE"
+  ],
+  [
+   348,
+   201,
+   0,
+   146,
+   0,
+   "IMAGE"
+  ],
+  [
+   349,
+   11,
+   0,
+   201,
+   0,
+   "IMAGE"
+  ],
+  [
+   350,
+   147,
+   0,
+   198,
+   0,
+   "IMAGE"
+  ],
+  [
+   351,
+   11,
+   0,
+   147,
+   0,
+   "IMAGE"
+  ],
+  [
+   352,
+   205,
+   0,
+   202,
+   0,
+   "IMAGE"
+  ],
+  [
+   353,
+   206,
+   0,
+   202,
+   1,
+   "IMAGE"
+  ],
+  [
+   354,
+   205,
+   0,
+   204,
+   0,
+   "IMAGE"
+  ],
+  [
+   355,
+   206,
+   0,
+   204,
+   1,
+   "IMAGE"
+  ],
+  [
+   356,
+   202,
+   0,
+   207,
+   0,
+   "IMAGE"
+  ],
+  [
+   357,
+   204,
+   0,
+   208,
+   0,
+   "IMAGE"
+  ],
+  [
+   359,
+   206,
+   0,
+   210,
+   0,
+   "IMAGE"
+  ],
+  [
+   360,
+   205,
+   0,
+   210,
+   1,
+   "IMAGE"
+  ],
+  [
+   361,
+   210,
+   0,
+   211,
+   0,
+   "IMAGE"
+  ],
+  [
+   409,
+   11,
+   0,
+   244,
+   0,
+   "IMAGE"
+  ],
+  [
+   410,
+   206,
+   0,
+   244,
+   1,
+   "IMAGE"
+  ],
+  [
+   411,
+   205,
+   0,
+   244,
+   2,
+   "IMAGE"
+  ],
+  [
+   412,
+   94,
+   0,
+   244,
+   3,
+   "IMAGE"
+  ],
+  [
+   413,
+   201,
+   0,
+   244,
+   4,
+   "IMAGE"
+  ],
+  [
+   414,
+   95,
+   0,
+   244,
+   5,
+   "IMAGE"
+  ],
+  [
+   415,
+   244,
+   0,
+   246,
+   0,
+   "VIDEO"
+  ]
+ ],
+ "groups": [
+  {
+   "id": 1,
+   "title": "00 Usage Guide / 사용방법",
+   "bounding": [
+    -1830,
+    -1080,
+    1065,
+    960
+   ],
+   "color": "#237DCC",
+   "flags": {}
+  },
+  {
+   "id": 2,
+   "title": "01·02 Reference Images",
+   "bounding": [
+    -1830,
+    0,
+    750,
+    1110
+   ],
+   "color": "#008EB5",
+   "flags": {}
+  },
+  {
+   "id": 3,
+   "title": "03 Optional Image Edit Candidates",
+   "bounding": [
+    -1045,
+    0,
+    1160,
+    1540
+   ],
+   "color": "#008EB5",
+   "flags": {}
+  },
+  {
+   "id": 4,
+   "title": "04A·05A Gemini Action Storyboard A",
+   "bounding": [
+    121,
+    0,
+    1480,
+    800
+   ],
+   "color": "#237DCC",
+   "flags": {}
+  },
+  {
+   "id": 5,
+   "title": "06A Save 9 Action Cuts A",
+   "bounding": [
+    1617,
+    0,
+    1220,
+    1320
+   ],
+   "color": "#318A34",
+   "flags": {}
+  },
+  {
+   "id": 6,
+   "title": "04B·05B Gemini Drama/Action Storyboard B",
+   "bounding": [
+    121,
+    1463,
+    1480,
+    800
+   ],
+   "color": "#237DCC",
+   "flags": {}
+  },
+  {
+   "id": 7,
+   "title": "06B Save 9 Action Cuts B",
+   "bounding": [
+    1617,
+    1463,
+    1220,
+    1320
+   ],
+   "color": "#318A34",
+   "flags": {}
+  },
+  {
+   "id": 8,
+   "title": "07·08 Seedance Reference Video Output",
+   "bounding": [
+    2915,
+    462,
+    1420,
+    720
+   ],
+   "color": "#318A34",
+   "flags": {}
+  }
+ ],
+ "definitions": {
+  "subgraphs": [
+   {
+    "id": "4a948e41-457a-46c9-85ac-b7d454cdefa2",
+    "version": 1,
+    "state": {
+     "lastGroupId": 8,
+     "lastNodeId": 1246,
+     "lastLinkId": 419,
+     "lastRerouteId": 0
+    },
+    "revision": 0,
+    "config": {},
+    "name": "3×3 스토리보드 분리기 · 내부",
+    "inputNode": {
+     "id": -10,
+     "bounding": [
+      -260,
+      100,
+      160,
+      100
+     ]
+    },
+    "outputNode": {
+     "id": -20,
+     "bounding": [
+      1641.0,
+      100,
+      160,
+      252
+     ]
+    },
+    "inputs": [
+     {
+      "id": "d381f8b2-8eee-4963-9db8-badb00ad6ebe",
+      "name": "image",
+      "type": "IMAGE",
+      "linkIds": [
+       231,
+       230,
+       224,
+       225,
+       226,
+       227,
+       233,
+       229,
+       228,
+       232
+      ],
+      "localized_name": "이미지",
+      "pos": [
+       -236,
+       124
+      ]
+     },
+     {
+      "id": "6462ca28-c5b8-4669-ba45-a220c7125f34",
+      "name": "a",
+      "type": "INT,FLOAT",
+      "linkIds": [
+       265
+      ],
+      "localized_name": "a",
+      "shape": 7,
+      "pos": [
+       -236,
+       148
+      ]
+     }
+    ],
+    "outputs": [
+     {
+      "id": "658e4d6e-5a60-4f8a-9765-e24c8f7f56ed",
+      "name": "IMAGE",
+      "type": "IMAGE",
+      "linkIds": [
+       234
+      ],
+      "localized_name": "이미지",
+      "pos": [
+       1665.0,
+       124
+      ]
+     },
+     {
+      "id": "b75babe1-8410-447f-8480-bc22cb9cfc10",
+      "name": "IMAGE_1",
+      "type": "IMAGE",
+      "linkIds": [
+       235
+      ],
+      "localized_name": "이미지_1",
+      "pos": [
+       1665.0,
+       148
+      ]
+     },
+     {
+      "id": "20dc5021-0653-43b4-9b9d-d6707cc1a722",
+      "name": "IMAGE_2",
+      "type": "IMAGE",
+      "linkIds": [
+       236
+      ],
+      "localized_name": "이미지_2",
+      "pos": [
+       1665.0,
+       172
+      ]
+     },
+     {
+      "id": "89aaff8a-d38f-4e95-8fea-b1c20d99ee6d",
+      "name": "IMAGE_3",
+      "type": "IMAGE",
+      "linkIds": [
+       237
+      ],
+      "localized_name": "이미지_3",
+      "pos": [
+       1665.0,
+       196
+      ]
+     },
+     {
+      "id": "d7162185-100d-496d-80bf-2ecc8f28ebe8",
+      "name": "IMAGE_4",
+      "type": "IMAGE",
+      "linkIds": [
+       238
+      ],
+      "localized_name": "이미지_4",
+      "pos": [
+       1665.0,
+       220
+      ]
+     },
+     {
+      "id": "4a984d8a-b3cc-42cd-94dc-6a6064ea61aa",
+      "name": "IMAGE_5",
+      "type": "IMAGE",
+      "linkIds": [
+       239
+      ],
+      "localized_name": "이미지_5",
+      "pos": [
+       1665.0,
+       244
+      ]
+     },
+     {
+      "id": "f865ddf7-e936-4f5e-9350-65d09ae9250d",
+      "name": "IMAGE_6",
+      "type": "IMAGE",
+      "linkIds": [
+       240
+      ],
+      "localized_name": "이미지_6",
+      "pos": [
+       1665.0,
+       268
+      ]
+     },
+     {
+      "id": "281069d9-554a-4319-9aa8-a09f58c1cb27",
+      "name": "IMAGE_7",
+      "type": "IMAGE",
+      "linkIds": [
+       241
+      ],
+      "localized_name": "이미지_7",
+      "pos": [
+       1665.0,
+       292
+      ]
+     },
+     {
+      "id": "eeb91b37-f80c-477d-98be-028b1f16811d",
+      "name": "IMAGE_8",
+      "type": "IMAGE",
+      "linkIds": [
+       242
+      ],
+      "localized_name": "이미지_8",
+      "pos": [
+       1665.0,
+       316
+      ]
+     }
+    ],
+    "widgets": [],
+    "nodes": [
+     {
+      "id": 115,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       100
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 215
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 116,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       423.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 216
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 117,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       746.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 217
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 118,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       1069.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 218
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 119,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       1392.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 219
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 120,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       1715.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 220
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 121,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       2038.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 221
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 122,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       2361.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 222
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 123,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       2684.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 223
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 124,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       100
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 231
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 272
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 285
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 297
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 300
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         215,
+         234,
+         243
+        ]
+       }
+      ],
+      "title": "1",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 125,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       302.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 230
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 273
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 286
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 253
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 301
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         216,
+         235,
+         244
+        ]
+       }
+      ],
+      "title": "2",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 126,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       504.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 224
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 274
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 287
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 256
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 302
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         223,
+         236,
+         245
+        ]
+       }
+      ],
+      "title": "3",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 127,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       706.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 225
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 275
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 288
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 298
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 262
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         217,
+         237,
+         246
+        ]
+       }
+      ],
+      "title": "4",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 128,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       908.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 226
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 276
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 289
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 254
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 263
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         218,
+         238,
+         247
+        ]
+       }
+      ],
+      "title": "5",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 129,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       1110.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 227
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 277
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 290
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 257
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 264
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         219,
+         239,
+         248
+        ]
+       }
+      ],
+      "title": "6",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 130,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       1312.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 233
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 278
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 291
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 299
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 259
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         220,
+         240,
+         249
+        ]
+       }
+      ],
+      "title": "7",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 131,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       1514.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 229
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 279
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 292
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 255
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 260
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         221,
+         241,
+         250
+        ]
+       }
+      ],
+      "title": "8",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 132,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       1716.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 228
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 280
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 293
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 258
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 261
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         222,
+         242,
+         251
+        ]
+       }
+      ],
+      "title": "9",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 133,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       3007.0
+      ],
+      "size": [
+       451.0,
+       627.0
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 252
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 134,
+      "type": "ImageBatchMulti",
+      "pos": [
+       30,
+       1918.0
+      ],
+      "size": [
+       340,
+       242.0
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "image_1",
+        "name": "image_1",
+        "type": "IMAGE",
+        "link": 243
+       },
+       {
+        "localized_name": "image_2",
+        "name": "image_2",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 244
+       },
+       {
+        "name": "image_3",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 245
+       },
+       {
+        "name": "image_4",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 246
+       },
+       {
+        "name": "image_5",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 247
+       },
+       {
+        "name": "image_6",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 248
+       },
+       {
+        "name": "image_7",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 249
+       },
+       {
+        "name": "image_8",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 250
+       },
+       {
+        "name": "image_9",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 251
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "images",
+        "name": "images",
+        "type": "IMAGE",
+        "links": [
+         252
+        ]
+       }
+      ],
+      "properties": {
+       "Node name for S&R": "ImageBatchMulti",
+       "cnr_id": "comfyui-kjnodes",
+       "ver": "c661baadd9683c0033cd2a6ad90157c6d099a6c2",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       9,
+       null
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 135,
+      "type": "GetImageSize",
+      "pos": [
+       30,
+       2230.0
+      ],
+      "size": [
+       340,
+       77.0
+      ],
+      "flags": {
+       "collapsed": false
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 232
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "width",
+        "name": "width",
+        "type": "INT",
+        "links": [
+         270
+        ]
+       },
+       {
+        "localized_name": "height",
+        "name": "height",
+        "type": "INT",
+        "links": [
+         283
+        ]
+       },
+       {
+        "localized_name": "batch_size",
+        "name": "batch_size",
+        "type": "INT",
+        "links": []
+       }
+      ],
+      "properties": {
+       "Node name for S&R": "GetImageSize",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.71",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 136,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       100
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 265
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": null
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         266,
+         267,
+         268,
+         269,
+         271,
+         284,
+         296,
+         303
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "a"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 137,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       258.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": null
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 303
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         300,
+         301,
+         302
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "Row 1 - Y val",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "(b/2)"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 138,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       416.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 283
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 284
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         285,
+         286,
+         287,
+         288,
+         289,
+         290,
+         291,
+         292,
+         293,
+         294,
+         295
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "HEIGHT",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "(a-3*b) / 3"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 139,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       574.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 270
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 271
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         272,
+         273,
+         274,
+         275,
+         276,
+         277,
+         278,
+         279,
+         280,
+         281,
+         282
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "WIDTH",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "(a-3*b) / 3"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 140,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       732.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": null
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 296
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         297,
+         298,
+         299
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "Col 1 - X val",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "b/2"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 141,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       890.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 281
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 266
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         253,
+         254,
+         255
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "Col 2 - X val",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "(a+b) + (b/2)"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 142,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       1048.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 295
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 269
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         262,
+         263,
+         264
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "Row 2 - Y val",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "(a+b) + (b/2)"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 143,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       1206.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 294
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 268
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         259,
+         260,
+         261
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "Row 3 - Y val",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "(2*a) + (3*b)"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 144,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       1364.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 282
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 267
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         256,
+         257,
+         258
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "Col 3 - X val",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "(2*a) + (b*3)"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     }
+    ],
+    "groups": [
+     {
+      "id": 3,
+      "title": "🎨 Conditioning / Processing",
+      "bounding": [
+       0,
+       30,
+       400,
+       2367.0
+      ],
+      "color": "#078563",
+      "font_size": 24,
+      "flags": {}
+     },
+     {
+      "id": 4,
+      "title": "🎛️ Settings / Switch",
+      "bounding": [
+       500,
+       30,
+       400,
+       1512.0
+      ],
+      "color": "#B37A00",
+      "font_size": 24,
+      "flags": {}
+     },
+     {
+      "id": 6,
+      "title": "🏁 Decoding / Output",
+      "bounding": [
+       1000,
+       30,
+       511.0,
+       3694.0
+      ],
+      "color": "#318A34",
+      "font_size": 24,
+      "flags": {}
+     }
+    ],
+    "links": [
+     {
+      "id": 215,
+      "origin_id": 124,
+      "origin_slot": 0,
+      "target_id": 115,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 216,
+      "origin_id": 125,
+      "origin_slot": 0,
+      "target_id": 116,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 217,
+      "origin_id": 127,
+      "origin_slot": 0,
+      "target_id": 117,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 218,
+      "origin_id": 128,
+      "origin_slot": 0,
+      "target_id": 118,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 219,
+      "origin_id": 129,
+      "origin_slot": 0,
+      "target_id": 119,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 220,
+      "origin_id": 130,
+      "origin_slot": 0,
+      "target_id": 120,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 221,
+      "origin_id": 131,
+      "origin_slot": 0,
+      "target_id": 121,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 222,
+      "origin_id": 132,
+      "origin_slot": 0,
+      "target_id": 122,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 223,
+      "origin_id": 126,
+      "origin_slot": 0,
+      "target_id": 123,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 272,
+      "origin_id": 139,
+      "origin_slot": 0,
+      "target_id": 124,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 285,
+      "origin_id": 138,
+      "origin_slot": 0,
+      "target_id": 124,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 297,
+      "origin_id": 140,
+      "origin_slot": 0,
+      "target_id": 124,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 300,
+      "origin_id": 137,
+      "origin_slot": 0,
+      "target_id": 124,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 273,
+      "origin_id": 139,
+      "origin_slot": 0,
+      "target_id": 125,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 286,
+      "origin_id": 138,
+      "origin_slot": 0,
+      "target_id": 125,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 253,
+      "origin_id": 141,
+      "origin_slot": 0,
+      "target_id": 125,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 301,
+      "origin_id": 137,
+      "origin_slot": 0,
+      "target_id": 125,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 274,
+      "origin_id": 139,
+      "origin_slot": 0,
+      "target_id": 126,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 287,
+      "origin_id": 138,
+      "origin_slot": 0,
+      "target_id": 126,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 256,
+      "origin_id": 144,
+      "origin_slot": 0,
+      "target_id": 126,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 302,
+      "origin_id": 137,
+      "origin_slot": 0,
+      "target_id": 126,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 275,
+      "origin_id": 139,
+      "origin_slot": 0,
+      "target_id": 127,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 288,
+      "origin_id": 138,
+      "origin_slot": 0,
+      "target_id": 127,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 298,
+      "origin_id": 140,
+      "origin_slot": 0,
+      "target_id": 127,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 262,
+      "origin_id": 142,
+      "origin_slot": 0,
+      "target_id": 127,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 276,
+      "origin_id": 139,
+      "origin_slot": 0,
+      "target_id": 128,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 289,
+      "origin_id": 138,
+      "origin_slot": 0,
+      "target_id": 128,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 254,
+      "origin_id": 141,
+      "origin_slot": 0,
+      "target_id": 128,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 263,
+      "origin_id": 142,
+      "origin_slot": 0,
+      "target_id": 128,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 277,
+      "origin_id": 139,
+      "origin_slot": 0,
+      "target_id": 129,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 290,
+      "origin_id": 138,
+      "origin_slot": 0,
+      "target_id": 129,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 257,
+      "origin_id": 144,
+      "origin_slot": 0,
+      "target_id": 129,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 264,
+      "origin_id": 142,
+      "origin_slot": 0,
+      "target_id": 129,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 278,
+      "origin_id": 139,
+      "origin_slot": 0,
+      "target_id": 130,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 291,
+      "origin_id": 138,
+      "origin_slot": 0,
+      "target_id": 130,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 299,
+      "origin_id": 140,
+      "origin_slot": 0,
+      "target_id": 130,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 259,
+      "origin_id": 143,
+      "origin_slot": 0,
+      "target_id": 130,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 279,
+      "origin_id": 139,
+      "origin_slot": 0,
+      "target_id": 131,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 292,
+      "origin_id": 138,
+      "origin_slot": 0,
+      "target_id": 131,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 255,
+      "origin_id": 141,
+      "origin_slot": 0,
+      "target_id": 131,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 260,
+      "origin_id": 143,
+      "origin_slot": 0,
+      "target_id": 131,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 280,
+      "origin_id": 139,
+      "origin_slot": 0,
+      "target_id": 132,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 293,
+      "origin_id": 138,
+      "origin_slot": 0,
+      "target_id": 132,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 258,
+      "origin_id": 144,
+      "origin_slot": 0,
+      "target_id": 132,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 261,
+      "origin_id": 143,
+      "origin_slot": 0,
+      "target_id": 132,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 252,
+      "origin_id": 134,
+      "origin_slot": 0,
+      "target_id": 133,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 243,
+      "origin_id": 124,
+      "origin_slot": 0,
+      "target_id": 134,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 244,
+      "origin_id": 125,
+      "origin_slot": 0,
+      "target_id": 134,
+      "target_slot": 1,
+      "type": "IMAGE"
+     },
+     {
+      "id": 245,
+      "origin_id": 126,
+      "origin_slot": 0,
+      "target_id": 134,
+      "target_slot": 2,
+      "type": "IMAGE"
+     },
+     {
+      "id": 246,
+      "origin_id": 127,
+      "origin_slot": 0,
+      "target_id": 134,
+      "target_slot": 3,
+      "type": "IMAGE"
+     },
+     {
+      "id": 247,
+      "origin_id": 128,
+      "origin_slot": 0,
+      "target_id": 134,
+      "target_slot": 4,
+      "type": "IMAGE"
+     },
+     {
+      "id": 248,
+      "origin_id": 129,
+      "origin_slot": 0,
+      "target_id": 134,
+      "target_slot": 5,
+      "type": "IMAGE"
+     },
+     {
+      "id": 249,
+      "origin_id": 130,
+      "origin_slot": 0,
+      "target_id": 134,
+      "target_slot": 6,
+      "type": "IMAGE"
+     },
+     {
+      "id": 250,
+      "origin_id": 131,
+      "origin_slot": 0,
+      "target_id": 134,
+      "target_slot": 7,
+      "type": "IMAGE"
+     },
+     {
+      "id": 251,
+      "origin_id": 132,
+      "origin_slot": 0,
+      "target_id": 134,
+      "target_slot": 8,
+      "type": "IMAGE"
+     },
+     {
+      "id": 303,
+      "origin_id": 136,
+      "origin_slot": 0,
+      "target_id": 137,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 283,
+      "origin_id": 135,
+      "origin_slot": 1,
+      "target_id": 138,
+      "target_slot": 0,
+      "type": "INT"
+     },
+     {
+      "id": 284,
+      "origin_id": 136,
+      "origin_slot": 0,
+      "target_id": 138,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 270,
+      "origin_id": 135,
+      "origin_slot": 0,
+      "target_id": 139,
+      "target_slot": 0,
+      "type": "INT"
+     },
+     {
+      "id": 271,
+      "origin_id": 136,
+      "origin_slot": 0,
+      "target_id": 139,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 296,
+      "origin_id": 136,
+      "origin_slot": 0,
+      "target_id": 140,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 281,
+      "origin_id": 139,
+      "origin_slot": 0,
+      "target_id": 141,
+      "target_slot": 0,
+      "type": "INT"
+     },
+     {
+      "id": 266,
+      "origin_id": 136,
+      "origin_slot": 0,
+      "target_id": 141,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 295,
+      "origin_id": 138,
+      "origin_slot": 0,
+      "target_id": 142,
+      "target_slot": 0,
+      "type": "INT"
+     },
+     {
+      "id": 269,
+      "origin_id": 136,
+      "origin_slot": 0,
+      "target_id": 142,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 294,
+      "origin_id": 138,
+      "origin_slot": 0,
+      "target_id": 143,
+      "target_slot": 0,
+      "type": "INT"
+     },
+     {
+      "id": 268,
+      "origin_id": 136,
+      "origin_slot": 0,
+      "target_id": 143,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 282,
+      "origin_id": 139,
+      "origin_slot": 0,
+      "target_id": 144,
+      "target_slot": 0,
+      "type": "INT"
+     },
+     {
+      "id": 267,
+      "origin_id": 136,
+      "origin_slot": 0,
+      "target_id": 144,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 231,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 124,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 230,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 125,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 224,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 126,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 225,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 127,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 226,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 128,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 227,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 129,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 233,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 130,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 229,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 131,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 228,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 132,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 232,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 135,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 265,
+      "origin_id": -10,
+      "origin_slot": 1,
+      "target_id": 136,
+      "target_slot": 0,
+      "type": "INT"
+     },
+     {
+      "id": 234,
+      "origin_id": 124,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 235,
+      "origin_id": 125,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 1,
+      "type": "IMAGE"
+     },
+     {
+      "id": 236,
+      "origin_id": 126,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 2,
+      "type": "IMAGE"
+     },
+     {
+      "id": 237,
+      "origin_id": 127,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 3,
+      "type": "IMAGE"
+     },
+     {
+      "id": 238,
+      "origin_id": 128,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 4,
+      "type": "IMAGE"
+     },
+     {
+      "id": 239,
+      "origin_id": 129,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 5,
+      "type": "IMAGE"
+     },
+     {
+      "id": 240,
+      "origin_id": 130,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 6,
+      "type": "IMAGE"
+     },
+     {
+      "id": 241,
+      "origin_id": 131,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 7,
+      "type": "IMAGE"
+     },
+     {
+      "id": 242,
+      "origin_id": 132,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 8,
+      "type": "IMAGE"
+     }
+    ],
+    "extra": {}
+   },
+   {
+    "id": "c84ec6bc-378b-4486-b782-b8d1072771f1",
+    "version": 1,
+    "state": {
+     "lastGroupId": 8,
+     "lastNodeId": 1246,
+     "lastLinkId": 419,
+     "lastRerouteId": 0
+    },
+    "revision": 0,
+    "config": {},
+    "name": "3×3 스토리보드 분리기",
+    "inputNode": {
+     "id": -10,
+     "bounding": [
+      -260,
+      100,
+      160,
+      100
+     ]
+    },
+    "outputNode": {
+     "id": -20,
+     "bounding": [
+      530,
+      100,
+      160,
+      252
+     ]
+    },
+    "inputs": [
+     {
+      "id": "70f0153a-c834-4589-abf1-6222819e5384",
+      "name": "image",
+      "type": "IMAGE",
+      "linkIds": [
+       304
+      ],
+      "localized_name": "이미지",
+      "pos": [
+       -236,
+       124
+      ]
+     },
+     {
+      "id": "4257eefd-f9f6-4330-a7b1-e07f60e8b28e",
+      "name": "a",
+      "type": "INT,FLOAT",
+      "linkIds": [
+       305
+      ],
+      "localized_name": "a",
+      "shape": 7,
+      "pos": [
+       -236,
+       148
+      ]
+     }
+    ],
+    "outputs": [
+     {
+      "id": "2149a93d-1f83-4536-8a85-03b2de1c1699",
+      "name": "IMAGE",
+      "type": "IMAGE",
+      "linkIds": [
+       306
+      ],
+      "localized_name": "이미지",
+      "pos": [
+       554,
+       124
+      ]
+     },
+     {
+      "id": "364df347-9ab9-4df1-baa9-7881da4040cf",
+      "name": "IMAGE_1",
+      "type": "IMAGE",
+      "linkIds": [
+       307
+      ],
+      "localized_name": "이미지_1",
+      "pos": [
+       554,
+       148
+      ]
+     },
+     {
+      "id": "a83e8ceb-8b20-4285-88c6-56270f458fe2",
+      "name": "IMAGE_2",
+      "type": "IMAGE",
+      "linkIds": [
+       308
+      ],
+      "localized_name": "이미지_2",
+      "pos": [
+       554,
+       172
+      ]
+     },
+     {
+      "id": "862cfd4b-fcf0-48b4-a813-e5cb4f58acc4",
+      "name": "IMAGE_3",
+      "type": "IMAGE",
+      "linkIds": [
+       309
+      ],
+      "localized_name": "이미지_3",
+      "pos": [
+       554,
+       196
+      ]
+     },
+     {
+      "id": "bd854387-24c4-4fa8-9aa4-99a5de0b222d",
+      "name": "IMAGE_4",
+      "type": "IMAGE",
+      "linkIds": [
+       310
+      ],
+      "localized_name": "이미지_4",
+      "pos": [
+       554,
+       220
+      ]
+     },
+     {
+      "id": "ecdf16a2-7885-41f4-a38b-56469cd3a435",
+      "name": "IMAGE_5",
+      "type": "IMAGE",
+      "linkIds": [
+       311
+      ],
+      "localized_name": "이미지_5",
+      "pos": [
+       554,
+       244
+      ]
+     },
+     {
+      "id": "efcdcd26-ebb1-4f3a-9b4e-50c0e0eb8195",
+      "name": "IMAGE_6",
+      "type": "IMAGE",
+      "linkIds": [
+       312
+      ],
+      "localized_name": "이미지_6",
+      "pos": [
+       554,
+       268
+      ]
+     },
+     {
+      "id": "b5337b6c-75b1-48a4-b5ef-908ac34f7acc",
+      "name": "IMAGE_7",
+      "type": "IMAGE",
+      "linkIds": [
+       313
+      ],
+      "localized_name": "이미지_7",
+      "pos": [
+       554,
+       292
+      ]
+     },
+     {
+      "id": "cd7742dd-b9c9-4e6a-ac46-76799ebf2dcc",
+      "name": "IMAGE_8",
+      "type": "IMAGE",
+      "linkIds": [
+       314
+      ],
+      "localized_name": "이미지_8",
+      "pos": [
+       554,
+       316
+      ]
+     }
+    ],
+    "widgets": [],
+    "nodes": [
+     {
+      "id": 145,
+      "type": "4a948e41-457a-46c9-85ac-b7d454cdefa2",
+      "pos": [
+       30,
+       100
+      ],
+      "size": [
+       340,
+       440.0
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 304
+       },
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 305
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "links": [
+         306
+        ]
+       },
+       {
+        "localized_name": "이미지_1",
+        "name": "IMAGE_1",
+        "type": "IMAGE",
+        "links": [
+         307
+        ]
+       },
+       {
+        "localized_name": "이미지_2",
+        "name": "IMAGE_2",
+        "type": "IMAGE",
+        "links": [
+         308
+        ]
+       },
+       {
+        "localized_name": "이미지_3",
+        "name": "IMAGE_3",
+        "type": "IMAGE",
+        "links": [
+         309
+        ]
+       },
+       {
+        "localized_name": "이미지_4",
+        "name": "IMAGE_4",
+        "type": "IMAGE",
+        "links": [
+         310
+        ]
+       },
+       {
+        "localized_name": "이미지_5",
+        "name": "IMAGE_5",
+        "type": "IMAGE",
+        "links": [
+         311
+        ]
+       },
+       {
+        "localized_name": "이미지_6",
+        "name": "IMAGE_6",
+        "type": "IMAGE",
+        "links": [
+         312
+        ]
+       },
+       {
+        "localized_name": "이미지_7",
+        "name": "IMAGE_7",
+        "type": "IMAGE",
+        "links": [
+         313
+        ]
+       },
+       {
+        "localized_name": "이미지_8",
+        "name": "IMAGE_8",
+        "type": "IMAGE",
+        "links": [
+         314
+        ]
+       }
+      ],
+      "properties": {
+       "proxyWidgets": [
+        [
+         "115",
+         "$$canvas-image-preview"
+        ],
+        [
+         "116",
+         "$$canvas-image-preview"
+        ],
+        [
+         "117",
+         "$$canvas-image-preview"
+        ],
+        [
+         "118",
+         "$$canvas-image-preview"
+        ],
+        [
+         "119",
+         "$$canvas-image-preview"
+        ],
+        [
+         "120",
+         "$$canvas-image-preview"
+        ],
+        [
+         "121",
+         "$$canvas-image-preview"
+        ],
+        [
+         "122",
+         "$$canvas-image-preview"
+        ],
+        [
+         "123",
+         "$$canvas-image-preview"
+        ],
+        [
+         "133",
+         "$$canvas-image-preview"
+        ]
+       ],
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     }
+    ],
+    "groups": [
+     {
+      "id": 3,
+      "title": "🎨 Conditioning / Processing",
+      "bounding": [
+       0,
+       30,
+       400,
+       600.0
+      ],
+      "color": "#078563",
+      "font_size": 24,
+      "flags": {}
+     }
+    ],
+    "links": [
+     {
+      "id": 304,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 145,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 305,
+      "origin_id": -10,
+      "origin_slot": 1,
+      "target_id": 145,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 306,
+      "origin_id": 145,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 307,
+      "origin_id": 145,
+      "origin_slot": 1,
+      "target_id": -20,
+      "target_slot": 1,
+      "type": "IMAGE"
+     },
+     {
+      "id": 308,
+      "origin_id": 145,
+      "origin_slot": 2,
+      "target_id": -20,
+      "target_slot": 2,
+      "type": "IMAGE"
+     },
+     {
+      "id": 309,
+      "origin_id": 145,
+      "origin_slot": 3,
+      "target_id": -20,
+      "target_slot": 3,
+      "type": "IMAGE"
+     },
+     {
+      "id": 310,
+      "origin_id": 145,
+      "origin_slot": 4,
+      "target_id": -20,
+      "target_slot": 4,
+      "type": "IMAGE"
+     },
+     {
+      "id": 311,
+      "origin_id": 145,
+      "origin_slot": 5,
+      "target_id": -20,
+      "target_slot": 5,
+      "type": "IMAGE"
+     },
+     {
+      "id": 312,
+      "origin_id": 145,
+      "origin_slot": 6,
+      "target_id": -20,
+      "target_slot": 6,
+      "type": "IMAGE"
+     },
+     {
+      "id": 313,
+      "origin_id": 145,
+      "origin_slot": 7,
+      "target_id": -20,
+      "target_slot": 7,
+      "type": "IMAGE"
+     },
+     {
+      "id": 314,
+      "origin_id": 145,
+      "origin_slot": 8,
+      "target_id": -20,
+      "target_slot": 8,
+      "type": "IMAGE"
+     }
+    ],
+    "extra": {}
+   },
+   {
+    "id": "c386107d-fcf8-4656-9d97-7947217b455e",
+    "version": 1,
+    "state": {
+     "lastGroupId": 8,
+     "lastNodeId": 1246,
+     "lastLinkId": 419,
+     "lastRerouteId": 0
+    },
+    "revision": 0,
+    "config": {},
+    "name": "3×3 스토리보드 분리기 · 내부",
+    "inputNode": {
+     "id": -10,
+     "bounding": [
+      -260,
+      100,
+      160,
+      100
+     ]
+    },
+    "outputNode": {
+     "id": -20,
+     "bounding": [
+      1641.0,
+      100,
+      160,
+      252
+     ]
+    },
+    "inputs": [
+     {
+      "id": "d381f8b2-8eee-4963-9db8-badb00ad6ebe",
+      "name": "image",
+      "type": "IMAGE",
+      "linkIds": [
+       231,
+       230,
+       224,
+       225,
+       226,
+       227,
+       233,
+       229,
+       228,
+       232
+      ],
+      "localized_name": "이미지",
+      "pos": [
+       -236,
+       124
+      ]
+     },
+     {
+      "id": "6462ca28-c5b8-4669-ba45-a220c7125f34",
+      "name": "a",
+      "type": "INT,FLOAT",
+      "linkIds": [
+       265
+      ],
+      "localized_name": "a",
+      "shape": 7,
+      "pos": [
+       -236,
+       148
+      ]
+     }
+    ],
+    "outputs": [
+     {
+      "id": "658e4d6e-5a60-4f8a-9765-e24c8f7f56ed",
+      "name": "IMAGE",
+      "type": "IMAGE",
+      "linkIds": [
+       234
+      ],
+      "localized_name": "이미지",
+      "pos": [
+       1665.0,
+       124
+      ]
+     },
+     {
+      "id": "b75babe1-8410-447f-8480-bc22cb9cfc10",
+      "name": "IMAGE_1",
+      "type": "IMAGE",
+      "linkIds": [
+       235
+      ],
+      "localized_name": "이미지_1",
+      "pos": [
+       1665.0,
+       148
+      ]
+     },
+     {
+      "id": "20dc5021-0653-43b4-9b9d-d6707cc1a722",
+      "name": "IMAGE_2",
+      "type": "IMAGE",
+      "linkIds": [
+       236
+      ],
+      "localized_name": "이미지_2",
+      "pos": [
+       1665.0,
+       172
+      ]
+     },
+     {
+      "id": "89aaff8a-d38f-4e95-8fea-b1c20d99ee6d",
+      "name": "IMAGE_3",
+      "type": "IMAGE",
+      "linkIds": [
+       237
+      ],
+      "localized_name": "이미지_3",
+      "pos": [
+       1665.0,
+       196
+      ]
+     },
+     {
+      "id": "d7162185-100d-496d-80bf-2ecc8f28ebe8",
+      "name": "IMAGE_4",
+      "type": "IMAGE",
+      "linkIds": [
+       238
+      ],
+      "localized_name": "이미지_4",
+      "pos": [
+       1665.0,
+       220
+      ]
+     },
+     {
+      "id": "4a984d8a-b3cc-42cd-94dc-6a6064ea61aa",
+      "name": "IMAGE_5",
+      "type": "IMAGE",
+      "linkIds": [
+       239
+      ],
+      "localized_name": "이미지_5",
+      "pos": [
+       1665.0,
+       244
+      ]
+     },
+     {
+      "id": "f865ddf7-e936-4f5e-9350-65d09ae9250d",
+      "name": "IMAGE_6",
+      "type": "IMAGE",
+      "linkIds": [
+       240
+      ],
+      "localized_name": "이미지_6",
+      "pos": [
+       1665.0,
+       268
+      ]
+     },
+     {
+      "id": "281069d9-554a-4319-9aa8-a09f58c1cb27",
+      "name": "IMAGE_7",
+      "type": "IMAGE",
+      "linkIds": [
+       241
+      ],
+      "localized_name": "이미지_7",
+      "pos": [
+       1665.0,
+       292
+      ]
+     },
+     {
+      "id": "eeb91b37-f80c-477d-98be-028b1f16811d",
+      "name": "IMAGE_8",
+      "type": "IMAGE",
+      "linkIds": [
+       242
+      ],
+      "localized_name": "이미지_8",
+      "pos": [
+       1665.0,
+       316
+      ]
+     }
+    ],
+    "widgets": [],
+    "nodes": [
+     {
+      "id": 150,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       100
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 215
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 151,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       423.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 216
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 152,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       746.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 217
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 153,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       1069.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 218
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 154,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       1392.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 219
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 155,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       1715.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 220
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 156,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       2038.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 221
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 157,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       2361.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 222
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 158,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       2684.0
+      ],
+      "size": [
+       451.0,
+       253.0
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 223
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 159,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       100
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 231
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 272
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 285
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 297
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 300
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         215,
+         234,
+         243
+        ]
+       }
+      ],
+      "title": "1",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 160,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       302.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 230
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 273
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 286
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 253
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 301
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         216,
+         235,
+         244
+        ]
+       }
+      ],
+      "title": "2",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 161,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       504.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 224
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 274
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 287
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 256
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 302
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         223,
+         236,
+         245
+        ]
+       }
+      ],
+      "title": "3",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 162,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       706.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 225
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 275
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 288
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 298
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 262
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         217,
+         237,
+         246
+        ]
+       }
+      ],
+      "title": "4",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 163,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       908.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 226
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 276
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 289
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 254
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 263
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         218,
+         238,
+         247
+        ]
+       }
+      ],
+      "title": "5",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 164,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       1110.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 227
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 277
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 290
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 257
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 264
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         219,
+         239,
+         248
+        ]
+       }
+      ],
+      "title": "6",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 165,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       1312.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 233
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 278
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 291
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 299
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 259
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         220,
+         240,
+         249
+        ]
+       }
+      ],
+      "title": "7",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 166,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       1514.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 229
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 279
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 292
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 255
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 260
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         221,
+         241,
+         250
+        ]
+       }
+      ],
+      "title": "8",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 167,
+      "type": "ImageCrop",
+      "pos": [
+       30,
+       1716.0
+      ],
+      "size": [
+       340,
+       132.0
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 228
+       },
+       {
+        "localized_name": "너비",
+        "name": "width",
+        "type": "INT",
+        "widget": {
+         "name": "width"
+        },
+        "link": 280
+       },
+       {
+        "localized_name": "높이",
+        "name": "height",
+        "type": "INT",
+        "widget": {
+         "name": "height"
+        },
+        "link": 293
+       },
+       {
+        "localized_name": "x",
+        "name": "x",
+        "type": "INT",
+        "widget": {
+         "name": "x"
+        },
+        "link": 258
+       },
+       {
+        "localized_name": "y",
+        "name": "y",
+        "type": "INT",
+        "widget": {
+         "name": "y"
+        },
+        "link": 261
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "slot_index": 0,
+        "links": [
+         222,
+         242,
+         251
+        ]
+       }
+      ],
+      "title": "9",
+      "properties": {
+       "Node name for S&R": "ImageCrop",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.26",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       1,
+       1,
+       0,
+       0
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 168,
+      "type": "PreviewImage",
+      "pos": [
+       1030,
+       3007.0
+      ],
+      "size": [
+       451.0,
+       627.0
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "images",
+        "type": "IMAGE",
+        "link": 252
+       }
+      ],
+      "outputs": [],
+      "properties": {
+       "Node name for S&R": "PreviewImage",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.76",
+       "studio_provider": "Local / Utility",
+       "studio_role": "output"
+      },
+      "widgets_values": [],
+      "color": "#318A34",
+      "bgcolor": "#285829"
+     },
+     {
+      "id": 169,
+      "type": "ImageBatchMulti",
+      "pos": [
+       30,
+       1918.0
+      ],
+      "size": [
+       340,
+       242.0
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "image_1",
+        "name": "image_1",
+        "type": "IMAGE",
+        "link": 243
+       },
+       {
+        "localized_name": "image_2",
+        "name": "image_2",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 244
+       },
+       {
+        "name": "image_3",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 245
+       },
+       {
+        "name": "image_4",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 246
+       },
+       {
+        "name": "image_5",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 247
+       },
+       {
+        "name": "image_6",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 248
+       },
+       {
+        "name": "image_7",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 249
+       },
+       {
+        "name": "image_8",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 250
+       },
+       {
+        "name": "image_9",
+        "shape": 7,
+        "type": "IMAGE",
+        "link": 251
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "images",
+        "name": "images",
+        "type": "IMAGE",
+        "links": [
+         252
+        ]
+       }
+      ],
+      "properties": {
+       "Node name for S&R": "ImageBatchMulti",
+       "cnr_id": "comfyui-kjnodes",
+       "ver": "c661baadd9683c0033cd2a6ad90157c6d099a6c2",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [
+       9,
+       null
+      ],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 170,
+      "type": "GetImageSize",
+      "pos": [
+       30,
+       2230.0
+      ],
+      "size": [
+       340,
+       77.0
+      ],
+      "flags": {
+       "collapsed": false
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 232
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "width",
+        "name": "width",
+        "type": "INT",
+        "links": [
+         270
+        ]
+       },
+       {
+        "localized_name": "height",
+        "name": "height",
+        "type": "INT",
+        "links": [
+         283
+        ]
+       },
+       {
+        "localized_name": "batch_size",
+        "name": "batch_size",
+        "type": "INT",
+        "links": []
+       }
+      ],
+      "properties": {
+       "Node name for S&R": "GetImageSize",
+       "cnr_id": "comfy-core",
+       "ver": "0.3.71",
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     },
+     {
+      "id": 171,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       100
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 265
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": null
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         266,
+         267,
+         268,
+         269,
+         271,
+         284,
+         296,
+         303
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "a"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 172,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       258.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": null
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 303
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         300,
+         301,
+         302
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "Row 1 - Y val",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "(b/2)"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 173,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       416.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 283
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 284
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         285,
+         286,
+         287,
+         288,
+         289,
+         290,
+         291,
+         292,
+         293,
+         294,
+         295
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "HEIGHT",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "(a-3*b) / 3"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 174,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       574.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 270
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 271
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         272,
+         273,
+         274,
+         275,
+         276,
+         277,
+         278,
+         279,
+         280,
+         281,
+         282
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "WIDTH",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "(a-3*b) / 3"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 175,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       732.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": null
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 296
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         297,
+         298,
+         299
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "Col 1 - X val",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "b/2"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 176,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       890.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 281
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 266
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         253,
+         254,
+         255
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "Col 2 - X val",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "(a+b) + (b/2)"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 177,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       1048.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 295
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 269
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         262,
+         263,
+         264
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "Row 2 - Y val",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "(a+b) + (b/2)"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 178,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       1206.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 294
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 268
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         259,
+         260,
+         261
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "Row 3 - Y val",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "(2*a) + (3*b)"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     },
+     {
+      "id": 179,
+      "type": "SimpleMath+",
+      "pos": [
+       530,
+       1364.0
+      ],
+      "size": [
+       340,
+       88.0
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 282
+       },
+       {
+        "localized_name": "b",
+        "name": "b",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 267
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "정수",
+        "name": "INT",
+        "type": "INT",
+        "links": [
+         256,
+         257,
+         258
+        ]
+       },
+       {
+        "localized_name": "실수",
+        "name": "FLOAT",
+        "type": "FLOAT",
+        "links": []
+       }
+      ],
+      "title": "Col 3 - X val",
+      "properties": {
+       "Node name for S&R": "SimpleMath+",
+       "cnr_id": "comfyui_essentials",
+       "ver": "1.1.0",
+       "studio_provider": "Local / Utility",
+       "studio_role": "control"
+      },
+      "widgets_values": [
+       "(2*a) + (b*3)"
+      ],
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+     }
+    ],
+    "groups": [
+     {
+      "id": 3,
+      "title": "🎨 Conditioning / Processing",
+      "bounding": [
+       0,
+       30,
+       400,
+       2367.0
+      ],
+      "color": "#078563",
+      "font_size": 24,
+      "flags": {}
+     },
+     {
+      "id": 4,
+      "title": "🎛️ Settings / Switch",
+      "bounding": [
+       500,
+       30,
+       400,
+       1512.0
+      ],
+      "color": "#B37A00",
+      "font_size": 24,
+      "flags": {}
+     },
+     {
+      "id": 6,
+      "title": "🏁 Decoding / Output",
+      "bounding": [
+       1000,
+       30,
+       511.0,
+       3694.0
+      ],
+      "color": "#318A34",
+      "font_size": 24,
+      "flags": {}
+     }
+    ],
+    "links": [
+     {
+      "id": 215,
+      "origin_id": 159,
+      "origin_slot": 0,
+      "target_id": 150,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 216,
+      "origin_id": 160,
+      "origin_slot": 0,
+      "target_id": 151,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 217,
+      "origin_id": 162,
+      "origin_slot": 0,
+      "target_id": 152,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 218,
+      "origin_id": 163,
+      "origin_slot": 0,
+      "target_id": 153,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 219,
+      "origin_id": 164,
+      "origin_slot": 0,
+      "target_id": 154,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 220,
+      "origin_id": 165,
+      "origin_slot": 0,
+      "target_id": 155,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 221,
+      "origin_id": 166,
+      "origin_slot": 0,
+      "target_id": 156,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 222,
+      "origin_id": 167,
+      "origin_slot": 0,
+      "target_id": 157,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 223,
+      "origin_id": 161,
+      "origin_slot": 0,
+      "target_id": 158,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 272,
+      "origin_id": 174,
+      "origin_slot": 0,
+      "target_id": 159,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 285,
+      "origin_id": 173,
+      "origin_slot": 0,
+      "target_id": 159,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 297,
+      "origin_id": 175,
+      "origin_slot": 0,
+      "target_id": 159,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 300,
+      "origin_id": 172,
+      "origin_slot": 0,
+      "target_id": 159,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 273,
+      "origin_id": 174,
+      "origin_slot": 0,
+      "target_id": 160,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 286,
+      "origin_id": 173,
+      "origin_slot": 0,
+      "target_id": 160,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 253,
+      "origin_id": 176,
+      "origin_slot": 0,
+      "target_id": 160,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 301,
+      "origin_id": 172,
+      "origin_slot": 0,
+      "target_id": 160,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 274,
+      "origin_id": 174,
+      "origin_slot": 0,
+      "target_id": 161,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 287,
+      "origin_id": 173,
+      "origin_slot": 0,
+      "target_id": 161,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 256,
+      "origin_id": 179,
+      "origin_slot": 0,
+      "target_id": 161,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 302,
+      "origin_id": 172,
+      "origin_slot": 0,
+      "target_id": 161,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 275,
+      "origin_id": 174,
+      "origin_slot": 0,
+      "target_id": 162,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 288,
+      "origin_id": 173,
+      "origin_slot": 0,
+      "target_id": 162,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 298,
+      "origin_id": 175,
+      "origin_slot": 0,
+      "target_id": 162,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 262,
+      "origin_id": 177,
+      "origin_slot": 0,
+      "target_id": 162,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 276,
+      "origin_id": 174,
+      "origin_slot": 0,
+      "target_id": 163,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 289,
+      "origin_id": 173,
+      "origin_slot": 0,
+      "target_id": 163,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 254,
+      "origin_id": 176,
+      "origin_slot": 0,
+      "target_id": 163,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 263,
+      "origin_id": 177,
+      "origin_slot": 0,
+      "target_id": 163,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 277,
+      "origin_id": 174,
+      "origin_slot": 0,
+      "target_id": 164,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 290,
+      "origin_id": 173,
+      "origin_slot": 0,
+      "target_id": 164,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 257,
+      "origin_id": 179,
+      "origin_slot": 0,
+      "target_id": 164,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 264,
+      "origin_id": 177,
+      "origin_slot": 0,
+      "target_id": 164,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 278,
+      "origin_id": 174,
+      "origin_slot": 0,
+      "target_id": 165,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 291,
+      "origin_id": 173,
+      "origin_slot": 0,
+      "target_id": 165,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 299,
+      "origin_id": 175,
+      "origin_slot": 0,
+      "target_id": 165,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 259,
+      "origin_id": 178,
+      "origin_slot": 0,
+      "target_id": 165,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 279,
+      "origin_id": 174,
+      "origin_slot": 0,
+      "target_id": 166,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 292,
+      "origin_id": 173,
+      "origin_slot": 0,
+      "target_id": 166,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 255,
+      "origin_id": 176,
+      "origin_slot": 0,
+      "target_id": 166,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 260,
+      "origin_id": 178,
+      "origin_slot": 0,
+      "target_id": 166,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 280,
+      "origin_id": 174,
+      "origin_slot": 0,
+      "target_id": 167,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 293,
+      "origin_id": 173,
+      "origin_slot": 0,
+      "target_id": 167,
+      "target_slot": 2,
+      "type": "INT"
+     },
+     {
+      "id": 258,
+      "origin_id": 179,
+      "origin_slot": 0,
+      "target_id": 167,
+      "target_slot": 3,
+      "type": "INT"
+     },
+     {
+      "id": 261,
+      "origin_id": 178,
+      "origin_slot": 0,
+      "target_id": 167,
+      "target_slot": 4,
+      "type": "INT"
+     },
+     {
+      "id": 252,
+      "origin_id": 169,
+      "origin_slot": 0,
+      "target_id": 168,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 243,
+      "origin_id": 159,
+      "origin_slot": 0,
+      "target_id": 169,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 244,
+      "origin_id": 160,
+      "origin_slot": 0,
+      "target_id": 169,
+      "target_slot": 1,
+      "type": "IMAGE"
+     },
+     {
+      "id": 245,
+      "origin_id": 161,
+      "origin_slot": 0,
+      "target_id": 169,
+      "target_slot": 2,
+      "type": "IMAGE"
+     },
+     {
+      "id": 246,
+      "origin_id": 162,
+      "origin_slot": 0,
+      "target_id": 169,
+      "target_slot": 3,
+      "type": "IMAGE"
+     },
+     {
+      "id": 247,
+      "origin_id": 163,
+      "origin_slot": 0,
+      "target_id": 169,
+      "target_slot": 4,
+      "type": "IMAGE"
+     },
+     {
+      "id": 248,
+      "origin_id": 164,
+      "origin_slot": 0,
+      "target_id": 169,
+      "target_slot": 5,
+      "type": "IMAGE"
+     },
+     {
+      "id": 249,
+      "origin_id": 165,
+      "origin_slot": 0,
+      "target_id": 169,
+      "target_slot": 6,
+      "type": "IMAGE"
+     },
+     {
+      "id": 250,
+      "origin_id": 166,
+      "origin_slot": 0,
+      "target_id": 169,
+      "target_slot": 7,
+      "type": "IMAGE"
+     },
+     {
+      "id": 251,
+      "origin_id": 167,
+      "origin_slot": 0,
+      "target_id": 169,
+      "target_slot": 8,
+      "type": "IMAGE"
+     },
+     {
+      "id": 303,
+      "origin_id": 171,
+      "origin_slot": 0,
+      "target_id": 172,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 283,
+      "origin_id": 170,
+      "origin_slot": 1,
+      "target_id": 173,
+      "target_slot": 0,
+      "type": "INT"
+     },
+     {
+      "id": 284,
+      "origin_id": 171,
+      "origin_slot": 0,
+      "target_id": 173,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 270,
+      "origin_id": 170,
+      "origin_slot": 0,
+      "target_id": 174,
+      "target_slot": 0,
+      "type": "INT"
+     },
+     {
+      "id": 271,
+      "origin_id": 171,
+      "origin_slot": 0,
+      "target_id": 174,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 296,
+      "origin_id": 171,
+      "origin_slot": 0,
+      "target_id": 175,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 281,
+      "origin_id": 174,
+      "origin_slot": 0,
+      "target_id": 176,
+      "target_slot": 0,
+      "type": "INT"
+     },
+     {
+      "id": 266,
+      "origin_id": 171,
+      "origin_slot": 0,
+      "target_id": 176,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 295,
+      "origin_id": 173,
+      "origin_slot": 0,
+      "target_id": 177,
+      "target_slot": 0,
+      "type": "INT"
+     },
+     {
+      "id": 269,
+      "origin_id": 171,
+      "origin_slot": 0,
+      "target_id": 177,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 294,
+      "origin_id": 173,
+      "origin_slot": 0,
+      "target_id": 178,
+      "target_slot": 0,
+      "type": "INT"
+     },
+     {
+      "id": 268,
+      "origin_id": 171,
+      "origin_slot": 0,
+      "target_id": 178,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 282,
+      "origin_id": 174,
+      "origin_slot": 0,
+      "target_id": 179,
+      "target_slot": 0,
+      "type": "INT"
+     },
+     {
+      "id": 267,
+      "origin_id": 171,
+      "origin_slot": 0,
+      "target_id": 179,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 231,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 159,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 230,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 160,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 224,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 161,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 225,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 162,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 226,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 163,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 227,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 164,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 233,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 165,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 229,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 166,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 228,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 167,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 232,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 170,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 265,
+      "origin_id": -10,
+      "origin_slot": 1,
+      "target_id": 171,
+      "target_slot": 0,
+      "type": "INT"
+     },
+     {
+      "id": 234,
+      "origin_id": 159,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 235,
+      "origin_id": 160,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 1,
+      "type": "IMAGE"
+     },
+     {
+      "id": 236,
+      "origin_id": 161,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 2,
+      "type": "IMAGE"
+     },
+     {
+      "id": 237,
+      "origin_id": 162,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 3,
+      "type": "IMAGE"
+     },
+     {
+      "id": 238,
+      "origin_id": 163,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 4,
+      "type": "IMAGE"
+     },
+     {
+      "id": 239,
+      "origin_id": 164,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 5,
+      "type": "IMAGE"
+     },
+     {
+      "id": 240,
+      "origin_id": 165,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 6,
+      "type": "IMAGE"
+     },
+     {
+      "id": 241,
+      "origin_id": 166,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 7,
+      "type": "IMAGE"
+     },
+     {
+      "id": 242,
+      "origin_id": 167,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 8,
+      "type": "IMAGE"
+     }
+    ],
+    "extra": {}
+   },
+   {
+    "id": "2cfc1b51-1ea0-4f9e-9b1a-203c50e2f188",
+    "version": 1,
+    "state": {
+     "lastGroupId": 8,
+     "lastNodeId": 1246,
+     "lastLinkId": 419,
+     "lastRerouteId": 0
+    },
+    "revision": 0,
+    "config": {},
+    "name": "3×3 스토리보드 분리기",
+    "inputNode": {
+     "id": -10,
+     "bounding": [
+      -260,
+      100,
+      160,
+      100
+     ]
+    },
+    "outputNode": {
+     "id": -20,
+     "bounding": [
+      530,
+      100,
+      160,
+      252
+     ]
+    },
+    "inputs": [
+     {
+      "id": "70f0153a-c834-4589-abf1-6222819e5384",
+      "name": "image",
+      "type": "IMAGE",
+      "linkIds": [
+       304
+      ],
+      "localized_name": "이미지",
+      "pos": [
+       -236,
+       124
+      ]
+     },
+     {
+      "id": "4257eefd-f9f6-4330-a7b1-e07f60e8b28e",
+      "name": "a",
+      "type": "INT,FLOAT",
+      "linkIds": [
+       305
+      ],
+      "localized_name": "a",
+      "shape": 7,
+      "pos": [
+       -236,
+       148
+      ]
+     }
+    ],
+    "outputs": [
+     {
+      "id": "2149a93d-1f83-4536-8a85-03b2de1c1699",
+      "name": "IMAGE",
+      "type": "IMAGE",
+      "linkIds": [
+       306
+      ],
+      "localized_name": "이미지",
+      "pos": [
+       554,
+       124
+      ]
+     },
+     {
+      "id": "364df347-9ab9-4df1-baa9-7881da4040cf",
+      "name": "IMAGE_1",
+      "type": "IMAGE",
+      "linkIds": [
+       307
+      ],
+      "localized_name": "이미지_1",
+      "pos": [
+       554,
+       148
+      ]
+     },
+     {
+      "id": "a83e8ceb-8b20-4285-88c6-56270f458fe2",
+      "name": "IMAGE_2",
+      "type": "IMAGE",
+      "linkIds": [
+       308
+      ],
+      "localized_name": "이미지_2",
+      "pos": [
+       554,
+       172
+      ]
+     },
+     {
+      "id": "862cfd4b-fcf0-48b4-a813-e5cb4f58acc4",
+      "name": "IMAGE_3",
+      "type": "IMAGE",
+      "linkIds": [
+       309
+      ],
+      "localized_name": "이미지_3",
+      "pos": [
+       554,
+       196
+      ]
+     },
+     {
+      "id": "bd854387-24c4-4fa8-9aa4-99a5de0b222d",
+      "name": "IMAGE_4",
+      "type": "IMAGE",
+      "linkIds": [
+       310
+      ],
+      "localized_name": "이미지_4",
+      "pos": [
+       554,
+       220
+      ]
+     },
+     {
+      "id": "ecdf16a2-7885-41f4-a38b-56469cd3a435",
+      "name": "IMAGE_5",
+      "type": "IMAGE",
+      "linkIds": [
+       311
+      ],
+      "localized_name": "이미지_5",
+      "pos": [
+       554,
+       244
+      ]
+     },
+     {
+      "id": "efcdcd26-ebb1-4f3a-9b4e-50c0e0eb8195",
+      "name": "IMAGE_6",
+      "type": "IMAGE",
+      "linkIds": [
+       312
+      ],
+      "localized_name": "이미지_6",
+      "pos": [
+       554,
+       268
+      ]
+     },
+     {
+      "id": "b5337b6c-75b1-48a4-b5ef-908ac34f7acc",
+      "name": "IMAGE_7",
+      "type": "IMAGE",
+      "linkIds": [
+       313
+      ],
+      "localized_name": "이미지_7",
+      "pos": [
+       554,
+       292
+      ]
+     },
+     {
+      "id": "cd7742dd-b9c9-4e6a-ac46-76799ebf2dcc",
+      "name": "IMAGE_8",
+      "type": "IMAGE",
+      "linkIds": [
+       314
+      ],
+      "localized_name": "이미지_8",
+      "pos": [
+       554,
+       316
+      ]
+     }
+    ],
+    "widgets": [],
+    "nodes": [
+     {
+      "id": 149,
+      "type": "c386107d-fcf8-4656-9d97-7947217b455e",
+      "pos": [
+       30,
+       100
+      ],
+      "size": [
+       340,
+       440.0
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+       {
+        "localized_name": "이미지",
+        "name": "image",
+        "type": "IMAGE",
+        "link": 304
+       },
+       {
+        "localized_name": "a",
+        "name": "a",
+        "shape": 7,
+        "type": "INT,FLOAT",
+        "link": 305
+       }
+      ],
+      "outputs": [
+       {
+        "localized_name": "이미지",
+        "name": "IMAGE",
+        "type": "IMAGE",
+        "links": [
+         306
+        ]
+       },
+       {
+        "localized_name": "이미지_1",
+        "name": "IMAGE_1",
+        "type": "IMAGE",
+        "links": [
+         307
+        ]
+       },
+       {
+        "localized_name": "이미지_2",
+        "name": "IMAGE_2",
+        "type": "IMAGE",
+        "links": [
+         308
+        ]
+       },
+       {
+        "localized_name": "이미지_3",
+        "name": "IMAGE_3",
+        "type": "IMAGE",
+        "links": [
+         309
+        ]
+       },
+       {
+        "localized_name": "이미지_4",
+        "name": "IMAGE_4",
+        "type": "IMAGE",
+        "links": [
+         310
+        ]
+       },
+       {
+        "localized_name": "이미지_5",
+        "name": "IMAGE_5",
+        "type": "IMAGE",
+        "links": [
+         311
+        ]
+       },
+       {
+        "localized_name": "이미지_6",
+        "name": "IMAGE_6",
+        "type": "IMAGE",
+        "links": [
+         312
+        ]
+       },
+       {
+        "localized_name": "이미지_7",
+        "name": "IMAGE_7",
+        "type": "IMAGE",
+        "links": [
+         313
+        ]
+       },
+       {
+        "localized_name": "이미지_8",
+        "name": "IMAGE_8",
+        "type": "IMAGE",
+        "links": [
+         314
+        ]
+       }
+      ],
+      "properties": {
+       "proxyWidgets": [
+        [
+         "150",
+         "$$canvas-image-preview"
+        ],
+        [
+         "151",
+         "$$canvas-image-preview"
+        ],
+        [
+         "152",
+         "$$canvas-image-preview"
+        ],
+        [
+         "153",
+         "$$canvas-image-preview"
+        ],
+        [
+         "154",
+         "$$canvas-image-preview"
+        ],
+        [
+         "155",
+         "$$canvas-image-preview"
+        ],
+        [
+         "156",
+         "$$canvas-image-preview"
+        ],
+        [
+         "157",
+         "$$canvas-image-preview"
+        ],
+        [
+         "158",
+         "$$canvas-image-preview"
+        ],
+        [
+         "168",
+         "$$canvas-image-preview"
+        ]
+       ],
+       "studio_provider": "Local / Utility",
+       "studio_role": "process"
+      },
+      "widgets_values": [],
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+     }
+    ],
+    "groups": [
+     {
+      "id": 3,
+      "title": "🎨 Conditioning / Processing",
+      "bounding": [
+       0,
+       30,
+       400,
+       600.0
+      ],
+      "color": "#078563",
+      "font_size": 24,
+      "flags": {}
+     }
+    ],
+    "links": [
+     {
+      "id": 304,
+      "origin_id": -10,
+      "origin_slot": 0,
+      "target_id": 149,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 305,
+      "origin_id": -10,
+      "origin_slot": 1,
+      "target_id": 149,
+      "target_slot": 1,
+      "type": "INT"
+     },
+     {
+      "id": 306,
+      "origin_id": 149,
+      "origin_slot": 0,
+      "target_id": -20,
+      "target_slot": 0,
+      "type": "IMAGE"
+     },
+     {
+      "id": 307,
+      "origin_id": 149,
+      "origin_slot": 1,
+      "target_id": -20,
+      "target_slot": 1,
+      "type": "IMAGE"
+     },
+     {
+      "id": 308,
+      "origin_id": 149,
+      "origin_slot": 2,
+      "target_id": -20,
+      "target_slot": 2,
+      "type": "IMAGE"
+     },
+     {
+      "id": 309,
+      "origin_id": 149,
+      "origin_slot": 3,
+      "target_id": -20,
+      "target_slot": 3,
+      "type": "IMAGE"
+     },
+     {
+      "id": 310,
+      "origin_id": 149,
+      "origin_slot": 4,
+      "target_id": -20,
+      "target_slot": 4,
+      "type": "IMAGE"
+     },
+     {
+      "id": 311,
+      "origin_id": 149,
+      "origin_slot": 5,
+      "target_id": -20,
+      "target_slot": 5,
+      "type": "IMAGE"
+     },
+     {
+      "id": 312,
+      "origin_id": 149,
+      "origin_slot": 6,
+      "target_id": -20,
+      "target_slot": 6,
+      "type": "IMAGE"
+     },
+     {
+      "id": 313,
+      "origin_id": 149,
+      "origin_slot": 7,
+      "target_id": -20,
+      "target_slot": 7,
+      "type": "IMAGE"
+     },
+     {
+      "id": 314,
+      "origin_id": 149,
+      "origin_slot": 8,
+      "target_id": -20,
+      "target_slot": 8,
+      "type": "IMAGE"
+     }
+    ],
+    "extra": {}
+   }
+  ]
+ },
+ "config": {},
+ "extra": {
+  "ds": {
+   "scale": 0.2557802576015242,
+   "offset": [
+    2114.547321960184,
+    757.5735980467372
+   ]
+  },
+  "frontendVersion": "1.44.19",
+  "workflowRendererVersion": "LG",
+  "VHS_latentpreview": false,
+  "VHS_latentpreviewrate": 0,
+  "VHS_MetadataImage": true,
+  "VHS_KeepIntermediate": true,
+  "title": "Multi-Angle Action 18-Cut Pipeline - Clean Layout",
+  "workflow_title": "Multi-Angle Action 18-Cut Pipeline - Clean Layout",
+  "image_api_update_audit": {
+   "runtime_verified": false,
+   "changes": [
+    {
+     "node": 202,
+     "before": "gpt-image-2",
+     "after": "gpt-image-2.5-sunburst"
+    }
+   ],
+   "source": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst",
+   "note": "Preserved dimensions, image links, prompt, seed, output count and quality. Cloud model availability and execution unverified."
+  },
+  "gemini_v2_migration": {
+   "changes": [
+    {
+     "node": 147,
+     "change": "Migrate Nano Banana 2 to current V2 schema; keep model, prompt, image batch, aspect, resolution, seed and outputs"
+    },
+    {
+     "node": 201,
+     "change": "Migrate Nano Banana 2 to current V2 schema; keep model, prompt, image batch, aspect, resolution, seed and outputs"
+    }
+   ],
+   "source": "https://github.com/Comfy-Org/ComfyUI/blob/master/comfy_api_nodes/nodes_gemini.py",
+   "runtime_verified": false
+  },
+  "seedance25_development": {
+   "changes": [
+    {
+     "node": 244,
+     "change": "Seedance 2.0→2.5 reference V2; retain media/length/ratio/audio; task_type=auto; repair obsolete widget ordering"
+    }
+   ],
+   "source": "https://github.com/Comfy-Org/ComfyUI/blob/master/comfy_api_nodes/nodes_bytedance.py",
+   "model_id": "dreamina-seedance-2-5-260628",
+   "runtime_verified": false
+  },
+  "studio_design": {
+   "version": "2026-09-13.4-role-colors",
+   "method": "Restore authored functional groups; use functional stage columns only where absent",
+   "execution_settings_preserved": true,
+   "cloud_visual_verified": false,
+   "new_custom_node_dependencies": [],
+   "provider_palette": {
+    "Google": [
+     "#1259B4",
+     "#102D52"
+    ],
+    "OpenAI": [
+     "#087A4C",
+     "#103D2B"
+    ],
+    "MiniMax": [
+     "#B52B62",
+     "#4B1730"
+    ],
+    "ByteDance": [
+     "#007D91",
+     "#0C3943"
+    ],
+    "WAN": [
+     "#2947BB",
+     "#1B2857"
+    ],
+    "LTX": [
+     "#BE4B0B",
+     "#51270F"
+    ],
+    "Qwen": [
+     "#7D2EBA",
+     "#391B52"
+    ],
+    "Z-Image": [
+     "#6F8500",
+     "#303B10"
+    ],
+    "Kling": [
+     "#BC3426",
+     "#4E211B"
+    ],
+    "Grok": [
+     "#3B697F",
+     "#203744"
+    ],
+    "Runway": [
+     "#9B620C",
+     "#443111"
+    ],
+    "Beeble": [
+     "#A78A00",
+     "#443C0F"
+    ],
+    "Local / Utility": [
+     "#354457",
+     "#1D2938"
+    ],
+    "Mixed": [
+     "#50536D",
+     "#292B40"
+    ]
+   },
+   "role_palette": {
+    "image": [
+     "#008EB5",
+     "#125873"
+    ],
+    "video": [
+     "#BE398A",
+     "#702853"
+    ],
+    "input": [
+     "#007DA6",
+     "#164D67"
+    ],
+    "control": [
+     "#B37A00",
+     "#695015"
+    ],
+    "model": [
+     "#485BD4",
+     "#303B83"
+    ],
+    "lora": [
+     "#AB398C",
+     "#632750"
+    ],
+    "prompt": [
+     "#078563",
+     "#18563F"
+    ],
+    "mask": [
+     "#CA4054",
+     "#722D3A"
+    ],
+    "depth": [
+     "#168B99",
+     "#235965"
+    ],
+    "sampling": [
+     "#CF641D",
+     "#75401E"
+    ],
+    "decode": [
+     "#7E45C2",
+     "#4D3279"
+    ],
+    "output": [
+     "#318A34",
+     "#285829"
+    ],
+    "process": [
+     "#237DCC",
+     "#244D78"
+    ],
+    "note": [
+     "#9A6D3B",
+     "#55422E"
+    ]
+   },
+   "color_method": "Distinct saturated node bodies and groups by functional role"
+  },
+  "optimization_review": {
+   "date": "2026-11-07",
+   "source": "1107_2/유료api/멀티모델_스토리영상_18컷__실행미검증.json",
+   "gpu_tested": false,
+   "changes": [
+    "영상 저장 설정 1곳 정규화: 일반 MP4 H.264 CRF18, 기존 CRF16/ProRes 유지. 배열·이름 저장값 동기화."
+   ]
+  }
+ },
+ "version": 0.4
+}

@@ -1,0 +1,1969 @@
+{
+  "id": "a0245ed6-51de-4b48-98fd-faaccf516a97",
+  "revision": 0,
+  "last_node_id": 49,
+  "last_link_id": 49,
+  "nodes": [
+    {
+      "id": 31,
+      "type": "VHS_LoadVideoFFmpeg",
+      "pos": [
+        4020.1346411155773,
+        3817.9791752683836
+      ],
+      "size": [
+        320,
+        286
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            33
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideoFFmpeg",
+        "studio_provider": "Local / Utility",
+        "studio_role": "video"
+      },
+      "widgets_values": {
+        "video": "",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "start_time": 0,
+        "format": "AnimateDiff",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      },
+      "widgets_values_named": {
+        "video": "",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "start_time": 0,
+        "format": "AnimateDiff",
+        "choose video to upload": null,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      },
+      "color": "#BE398A",
+      "bgcolor": "#702853"
+    },
+    {
+      "id": 33,
+      "type": "VHS_LoadVideoFFmpeg",
+      "pos": [
+        4022.146897097694,
+        4630.9716059688735
+      ],
+      "size": [
+        320,
+        286
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            36
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideoFFmpeg",
+        "studio_provider": "Local / Utility",
+        "studio_role": "video"
+      },
+      "widgets_values": {
+        "video": "",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "start_time": 0,
+        "format": "AnimateDiff",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      },
+      "widgets_values_named": {
+        "video": "",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "start_time": 0,
+        "format": "AnimateDiff",
+        "choose video to upload": null,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      },
+      "color": "#BE398A",
+      "bgcolor": "#702853"
+    },
+    {
+      "id": 38,
+      "type": "SaveVideo",
+      "pos": [
+        5202.146897097696,
+        4850.9716059688735
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "studio_provider": "Beeble",
+        "studio_role": "output"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "mp4",
+        "h264",
+        "re-encode",
+        18,
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/ComfyUI",
+        "format": "mp4",
+        "format.codec": "h264",
+        "format.codec.encoding": "re-encode",
+        "format.codec.encoding.crf": 18,
+        "codec": "auto"
+      },
+      "color": "#318A34",
+      "bgcolor": "#285829"
+    },
+    {
+      "id": 37,
+      "type": "SaveVideo",
+      "pos": [
+        5200.13464111558,
+        4037.9791752683836
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "studio_provider": "Beeble",
+        "studio_role": "output"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "mp4",
+        "h264",
+        "re-encode",
+        18,
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/ComfyUI",
+        "format": "mp4",
+        "format.codec": "h264",
+        "format.codec.encoding": "re-encode",
+        "format.codec.encoding.crf": 18,
+        "codec": "auto"
+      },
+      "color": "#318A34",
+      "bgcolor": "#285829"
+    },
+    {
+      "id": 36,
+      "type": "SaveVideo",
+      "pos": [
+        5202.669325761359,
+        3258.7996581909474
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 37
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "studio_provider": "Beeble",
+        "studio_role": "output"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "mp4",
+        "h264",
+        "re-encode",
+        18,
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/ComfyUI",
+        "format": "mp4",
+        "format.codec": "h264",
+        "format.codec.encoding": "re-encode",
+        "format.codec.encoding.crf": 18,
+        "codec": "auto"
+      },
+      "color": "#318A34",
+      "bgcolor": "#285829"
+    },
+    {
+      "id": 29,
+      "type": "BeebleSwitchXVideoEdit",
+      "pos": [
+        4740.13464111558,
+        3817.9791752683836
+      ],
+      "size": [
+        420,
+        224
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 34
+        },
+        {
+          "name": "reference_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 32
+        },
+        {
+          "label": "alpha_mask",
+          "name": "alpha_mode.alpha_mask",
+          "type": "MASK",
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": [
+            38
+          ]
+        },
+        {
+          "name": "alpha",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BeebleSwitchXVideoEdit",
+        "studio_provider": "Beeble",
+        "studio_role": "control"
+      },
+      "widgets_values": [
+        "a woman dancing in the desert",
+        "custom",
+        "1080p",
+        0,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "prompt": "a woman dancing in the desert",
+        "alpha_mode": "custom",
+        "max_resolution": "1080p",
+        "seed": 0,
+        "control_after_generate": "randomize"
+      },
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+    },
+    {
+      "id": 34,
+      "type": "BeebleSwitchXVideoEdit",
+      "pos": [
+        4742.146897097696,
+        4630.9716059688735
+      ],
+      "size": [
+        420,
+        224
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "reference_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 35
+        },
+        {
+          "label": "alpha_mask",
+          "name": "alpha_mode.alpha_mask",
+          "type": "MASK",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": [
+            39
+          ]
+        },
+        {
+          "name": "alpha",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BeebleSwitchXVideoEdit",
+        "studio_provider": "Beeble",
+        "studio_role": "control"
+      },
+      "widgets_values": [
+        "a woman dancing in a flower field",
+        "custom",
+        "1080p",
+        0,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "prompt": "a woman dancing in a flower field",
+        "alpha_mode": "custom",
+        "max_resolution": "1080p",
+        "seed": 0,
+        "control_after_generate": "randomize"
+      },
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+    },
+    {
+      "id": 27,
+      "type": "VHS_LoadVideoFFmpeg",
+      "pos": [
+        4000.6367827002873,
+        3179.040419585074
+      ],
+      "size": [
+        320,
+        286
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            29
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideoFFmpeg",
+        "studio_provider": "Local / Utility",
+        "studio_role": "video"
+      },
+      "widgets_values": {
+        "video": "",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "start_time": 0,
+        "format": "AnimateDiff",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      },
+      "widgets_values_named": {
+        "video": "",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "start_time": 0,
+        "format": "AnimateDiff",
+        "choose video to upload": null,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      },
+      "color": "#BE398A",
+      "bgcolor": "#702853"
+    },
+    {
+      "id": 26,
+      "type": "BeebleSwitchXVideoEdit",
+      "pos": [
+        4742.669325761359,
+        3038.7996581909474
+      ],
+      "size": [
+        420,
+        224
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 28
+        },
+        {
+          "name": "reference_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 30
+        },
+        {
+          "label": "alpha_mask",
+          "name": "alpha_mode.alpha_mask",
+          "type": "MASK",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": [
+            37
+          ]
+        },
+        {
+          "name": "alpha",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BeebleSwitchXVideoEdit",
+        "studio_provider": "Beeble",
+        "studio_role": "control"
+      },
+      "widgets_values": [
+        "a woman dancing in the desert",
+        "custom",
+        "720p",
+        0,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "prompt": "a woman dancing in the desert",
+        "alpha_mode": "custom",
+        "max_resolution": "720p",
+        "seed": 0,
+        "control_after_generate": "randomize"
+      },
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+    },
+    {
+      "id": 18,
+      "type": "GrokVideoEditNode",
+      "pos": [
+        2174.674903063423,
+        3074.8418130383056
+      ],
+      "size": [
+        430,
+        620
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            20,
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GrokVideoEditNode",
+        "studio_provider": "Grok",
+        "studio_role": "process"
+      },
+      "widgets_values": [
+        "grok-imagine-video",
+        "신발에 불이 붙었다 ",
+        376146480,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "model": "grok-imagine-video",
+        "prompt": "신발에 불이 붙었다 ",
+        "seed": 376146480,
+        "control_after_generate": "randomize"
+      },
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+    },
+    {
+      "id": 23,
+      "type": "GetVideoComponents",
+      "pos": [
+        2672.4049156029605,
+        3040.711092131749
+      ],
+      "size": [
+        163.69490661621094,
+        86
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            26
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "links": [
+            49
+          ]
+        },
+        {
+          "name": "bit_depth",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GetVideoComponents",
+        "studio_provider": "Grok",
+        "studio_role": "process"
+      },
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+    },
+    {
+      "id": 25,
+      "type": "RTXVideoSuperResolution",
+      "pos": [
+        2867.899161581629,
+        3037.818741055266
+      ],
+      "size": [
+        285.81015625,
+        106
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "upscaled_images",
+          "type": "IMAGE",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RTXVideoSuperResolution",
+        "studio_provider": "Local / Utility",
+        "studio_role": "control"
+      },
+      "widgets_values": [
+        "scale by multiplier",
+        2,
+        "ULTRA"
+      ],
+      "widgets_values_named": {
+        "resize_type": "scale by multiplier",
+        "resize_type.scale": 2,
+        "quality": "ULTRA"
+      },
+      "color": "#B37A00",
+      "bgcolor": "#695015"
+    },
+    {
+      "id": 24,
+      "type": "CreateVideo",
+      "pos": [
+        3192.9176751677733,
+        3038.286143751264
+      ],
+      "size": [
+        270,
+        102
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 27
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 49
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            47
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo",
+        "studio_provider": "Local / Utility",
+        "studio_role": "decode"
+      },
+      "widgets_values": [
+        30,
+        8,
+        "sRGB",
+        "auto",
+        "none"
+      ],
+      "widgets_values_named": {
+        "fps": 30,
+        "bit_depth": 8,
+        "color_space": "sRGB",
+        "chroma_subsampling": "auto",
+        "codec": "none"
+      },
+      "color": "#7E45C2",
+      "bgcolor": "#4D3279"
+    },
+    {
+      "id": 47,
+      "type": "SaveVideo",
+      "pos": [
+        3490.6594121495846,
+        3037.3759404116367
+      ],
+      "size": [
+        500,
+        106
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 47
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "studio_provider": "Local / Utility",
+        "studio_role": "output"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "mp4",
+        "h264",
+        "re-encode",
+        18,
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/ComfyUI",
+        "format": "mp4",
+        "format.codec": "h264",
+        "format.codec.encoding": "re-encode",
+        "format.codec.encoding.crf": 18,
+        "codec": "auto"
+      },
+      "color": "#318A34",
+      "bgcolor": "#285829"
+    },
+    {
+      "id": 21,
+      "type": "GeminiVideoOmni",
+      "pos": [
+        2862.1944784212174,
+        4055.3276207141403
+      ],
+      "size": [
+        372.09615711238007,
+        268
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image_1",
+          "name": "model.images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 48
+        },
+        {
+          "label": "image_2",
+          "name": "model.images.image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "video_1",
+          "name": "model.videos.video_1",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": 23
+        },
+        {
+          "label": "video_2",
+          "name": "model.videos.video_2",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            21
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GeminiVideoOmni",
+        "studio_provider": "Google",
+        "studio_role": "process"
+      },
+      "widgets_values": [
+        "Omni Flash",
+        "The uploaded video is COMPLETELY LOCKED.\n\nDO NOT modify, regenerate, reinterpret, replace, redraw, restyle, crop, stabilize, enhance, or alter any part of the original footage.\n\nKeep absolutely identical:\n• dancer\n• body proportions\n• clothing\n• sunglasses\n• background\n• building\n• floor\n• perspective\n• framing\n• camera\n• timing\n• choreography\n• motion\n• lighting\n• shadows\n• colors\n• image quality\n\nThe output must preserve the original video pixel-for-pixel.\n\nONLY generate animated 2D motion graphics as a transparent overlay layer that appears above the existing footage.\n\nThe graphics must never cover the dancer's body completely and must naturally follow the movement.\n\nEvery graphic element should appear only during the corresponding dance motion and disappear immediately afterward.\n\nStyle:\nModern hip-hop motion graphics, Spider-Verse inspired, comic-book animation, hand-drawn motion design, bold graphic shapes, energetic editorial animation.\n\nUse only flat 2D vector-style graphics.\n\nInclude:\n\n• Brush stroke trails following arm swings\n• Speed lines following fast movements\n• Comic impact bursts\n• Ink splash accents\n• Dynamic motion trails\n• Halftone dot textures\n• Circular impact rings\n• Graphic arrows\n• Scribble lines\n• Lightning accents\n• Floating geometric shapes\n• Graphic particles\n• Small stars\n• Cross marks\n• X symbols\n• Triangle bursts\n• Circular frames\n• Liquid graphic lines\n• Graphic shockwaves under footsteps\n• Dust puff graphics\n• Animated paint streaks\n\nAnimation behavior:\n\nHand movement →\nBrush strokes, speed lines, comic trails.\n\nFoot movement →\nShockwave circles, dust puffs, impact splashes.\n\nBody pop →\nComic burst, halftone pulse, expanding rings.\n\nSpin →\nLarge rotating graphic circle with floating geometric particles.\n\nFinal pose →\nLarge comic explosion graphic behind the dancer that quickly dissolves into scattered paper fragments.\n\nGraphics should use only:\n\nWhite\nBlack\nCyan\nRed\n\nNo gradients.\nNo 3D graphics.\nNo realistic effects.\nNo glow.\nNo lens flare.\nNo smoke.\nNo fire.\n\nThe motion graphics should feel like professionally animated Adobe After Effects shape layers.\n\nEverything should remain perfectly synchronized to the dancer's movements.\n\nOutput only the animated overlay layer aesthetic while preserving the original footage exactly.",
+        1,
+        0.95,
+        1752169631,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "model": "Omni Flash",
+        "model.prompt": "The uploaded video is COMPLETELY LOCKED.\n\nDO NOT modify, regenerate, reinterpret, replace, redraw, restyle, crop, stabilize, enhance, or alter any part of the original footage.\n\nKeep absolutely identical:\n• dancer\n• body proportions\n• clothing\n• sunglasses\n• background\n• building\n• floor\n• perspective\n• framing\n• camera\n• timing\n• choreography\n• motion\n• lighting\n• shadows\n• colors\n• image quality\n\nThe output must preserve the original video pixel-for-pixel.\n\nONLY generate animated 2D motion graphics as a transparent overlay layer that appears above the existing footage.\n\nThe graphics must never cover the dancer's body completely and must naturally follow the movement.\n\nEvery graphic element should appear only during the corresponding dance motion and disappear immediately afterward.\n\nStyle:\nModern hip-hop motion graphics, Spider-Verse inspired, comic-book animation, hand-drawn motion design, bold graphic shapes, energetic editorial animation.\n\nUse only flat 2D vector-style graphics.\n\nInclude:\n\n• Brush stroke trails following arm swings\n• Speed lines following fast movements\n• Comic impact bursts\n• Ink splash accents\n• Dynamic motion trails\n• Halftone dot textures\n• Circular impact rings\n• Graphic arrows\n• Scribble lines\n• Lightning accents\n• Floating geometric shapes\n• Graphic particles\n• Small stars\n• Cross marks\n• X symbols\n• Triangle bursts\n• Circular frames\n• Liquid graphic lines\n• Graphic shockwaves under footsteps\n• Dust puff graphics\n• Animated paint streaks\n\nAnimation behavior:\n\nHand movement →\nBrush strokes, speed lines, comic trails.\n\nFoot movement →\nShockwave circles, dust puffs, impact splashes.\n\nBody pop →\nComic burst, halftone pulse, expanding rings.\n\nSpin →\nLarge rotating graphic circle with floating geometric particles.\n\nFinal pose →\nLarge comic explosion graphic behind the dancer that quickly dissolves into scattered paper fragments.\n\nGraphics should use only:\n\nWhite\nBlack\nCyan\nRed\n\nNo gradients.\nNo 3D graphics.\nNo realistic effects.\nNo glow.\nNo lens flare.\nNo smoke.\nNo fire.\n\nThe motion graphics should feel like professionally animated Adobe After Effects shape layers.\n\nEverything should remain perfectly synchronized to the dancer's movements.\n\nOutput only the animated overlay layer aesthetic while preserving the original footage exactly.",
+        "model.temperature": 1,
+        "model.top_p": 0.95,
+        "seed": 1752169631,
+        "control_after_generate": "randomize"
+      },
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+    },
+    {
+      "id": 41,
+      "type": "RunwayAleph2KeyframeNode",
+      "pos": [
+        2341.2104534988466,
+        4522.809984199855
+      ],
+      "size": [
+        300,
+        102
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 46
+        },
+        {
+          "name": "keyframes",
+          "shape": 7,
+          "type": "RUNWAY_ALEPH2_KEYFRAME",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "keyframes",
+          "type": "RUNWAY_ALEPH2_KEYFRAME",
+          "links": [
+            43
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RunwayAleph2KeyframeNode",
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0",
+        "studio_provider": "Runway",
+        "studio_role": "process"
+      },
+      "widgets_values": [
+        "Absolute time (seconds)",
+        0
+      ],
+      "widgets_values_named": {
+        "timing": "Absolute time (seconds)",
+        "timing.seconds": 0
+      },
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+    },
+    {
+      "id": 43,
+      "type": "RunwayAleph2VideoToVideoNode",
+      "pos": [
+        2843.3681004891187,
+        4516.212805621657
+      ],
+      "size": [
+        399.984375,
+        315.125
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 44
+        },
+        {
+          "name": "keyframes",
+          "shape": 7,
+          "type": "RUNWAY_ALEPH2_KEYFRAME",
+          "link": 43
+        },
+        {
+          "name": "prompt_images",
+          "shape": 7,
+          "type": "RUNWAY_ALEPH2_PROMPT_IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            45
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RunwayAleph2VideoToVideoNode",
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0",
+        "studio_provider": "Runway",
+        "studio_role": "process"
+      },
+      "widgets_values": [
+        "Change the scene to a surfing scene and replace the characters with surfers",
+        2374599215,
+        "randomize",
+        "low"
+      ],
+      "widgets_values_named": {
+        "prompt": "Change the scene to a surfing scene and replace the characters with surfers",
+        "seed": 2374599215,
+        "control_after_generate": "randomize",
+        "public_figure_threshold": "low"
+      },
+      "color": "#237DCC",
+      "bgcolor": "#244D78"
+    },
+    {
+      "id": 20,
+      "type": "SaveVideo",
+      "pos": [
+        3297.858438156254,
+        4052.632897832846
+      ],
+      "size": [
+        566.8355372168635,
+        106
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "studio_provider": "Google",
+        "studio_role": "output"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "mp4",
+        "h264",
+        "re-encode",
+        18,
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/ComfyUI",
+        "format": "mp4",
+        "format.codec": "h264",
+        "format.codec.encoding": "re-encode",
+        "format.codec.encoding.crf": 18,
+        "codec": "auto"
+      },
+      "color": "#318A34",
+      "bgcolor": "#285829"
+    },
+    {
+      "id": 15,
+      "type": "LoadVideo",
+      "pos": [
+        1440.1633522727275,
+        3021.271306818183
+      ],
+      "size": [
+        681.8529567705164,
+        678.9938487315139
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            19,
+            23,
+            28,
+            34,
+            44
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo",
+        "studio_provider": "Local / Utility",
+        "studio_role": "video"
+      },
+      "widgets_values": [
+        "",
+        "image"
+      ],
+      "widgets_values_named": {
+        "file": "",
+        "upload": "image"
+      },
+      "color": "#BE398A",
+      "bgcolor": "#702853"
+    },
+    {
+      "id": 46,
+      "type": "LoadImage",
+      "pos": [
+        1427.3014479759527,
+        3786.35160489913
+      ],
+      "size": [
+        695.3662115198554,
+        621.549808939365
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            46,
+            48
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "studio_provider": "Local / Utility",
+        "studio_role": "image"
+      },
+      "widgets_values": [
+        "",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "",
+        "upload": "image"
+      },
+      "color": "#008EB5",
+      "bgcolor": "#125873"
+    },
+    {
+      "id": 45,
+      "type": "SaveVideo",
+      "pos": [
+        3317.475393941289,
+        4527.532067763842
+      ],
+      "size": [
+        566.8355372168635,
+        318
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 45
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "studio_provider": "Runway",
+        "studio_role": "output"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "mp4",
+        "h264",
+        "re-encode",
+        18,
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/ComfyUI",
+        "format": "mp4",
+        "format.codec": "h264",
+        "format.codec.encoding": "re-encode",
+        "format.codec.encoding.crf": 18,
+        "codec": "auto"
+      },
+      "color": "#318A34",
+      "bgcolor": "#285829"
+    },
+    {
+      "id": 32,
+      "type": "LoadImage",
+      "pos": [
+        4389.559197581227,
+        3817.9676791330744
+      ],
+      "size": [
+        270,
+        314
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            32
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "studio_provider": "Local / Utility",
+        "studio_role": "image"
+      },
+      "widgets_values": [
+        "",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "",
+        "upload": "image"
+      },
+      "color": "#008EB5",
+      "bgcolor": "#125873"
+    },
+    {
+      "id": 35,
+      "type": "LoadImage",
+      "pos": [
+        4390.907167645051,
+        4636.64805800886
+      ],
+      "size": [
+        270,
+        314
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            35
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "studio_provider": "Local / Utility",
+        "studio_role": "image"
+      },
+      "widgets_values": [
+        "",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "",
+        "upload": "image"
+      },
+      "color": "#008EB5",
+      "bgcolor": "#125873"
+    },
+    {
+      "id": 28,
+      "type": "LoadImage",
+      "pos": [
+        4382.669325761359,
+        3167.007913298628
+      ],
+      "size": [
+        270,
+        314
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            30
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "studio_provider": "Local / Utility",
+        "studio_role": "image"
+      },
+      "widgets_values": [
+        "",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "",
+        "upload": "image"
+      },
+      "color": "#008EB5",
+      "bgcolor": "#125873"
+    },
+    {
+      "id": 19,
+      "type": "SaveVideo",
+      "pos": [
+        3474.0625712664328,
+        3490.214994636694
+      ],
+      "size": [
+        500,
+        106
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "studio_provider": "Grok",
+        "studio_role": "output"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "mp4",
+        "h264",
+        "re-encode",
+        18,
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/ComfyUI",
+        "format": "mp4",
+        "format.codec": "h264",
+        "format.codec.encoding": "re-encode",
+        "format.codec.encoding.crf": 18,
+        "codec": "auto"
+      },
+      "color": "#318A34",
+      "bgcolor": "#285829"
+    },
+    {
+      "id": 48,
+      "type": "MarkdownNote",
+      "pos": [
+        640,
+        2941
+      ],
+      "size": [
+        700,
+        1180
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "⚠ 실행 전 확인 · 유료 Queue · #34 영상 연결",
+      "properties": {},
+      "widgets_values": [
+        "## ⚠ 실행 전 확인 — 검토 추가 안내 (2026-11-07 개정 · 정적 검토, 실행·유료 호출 안 함)\n\n### 1. Beeble Variant C (#34) 영상 입력이 비어 있음\n- **원인**: 06 Beeble Variant C의 `BeebleSwitchXVideoEdit` **#34 필수 입력 `video`에 연결이 없습니다** (A #26 · B #29는 LoadVideo #15에 연결됨).\n- **이대로 Queue 하면**: ComfyUI는 검증에 실패한 출력만 빼고 나머지 출력을 실행합니다. #34 → SaveVideo #38 출력은 `Required input is missing: video`로 빠집니다. **다른 유료 분기(Grok #18 · Gemini Omni #21 · Beeble A #26 · Beeble B #29 · Runway #43)도 입력과 계정이 유효하면 실행·과금될 수 있습니다.**\n- **이 파일에는 원본 영상·참조 이미지가 들어 있지 않습니다** (해시 이름 mp4·png만 지정). 그 파일이 ComfyUI input 폴더에 없으면 연결된 로더가 입력 검증에 실패하고, 그 로더에 걸린 출력도 빠집니다. 실제 실행·과금 여부는 입력 파일, 계정 자격, 서비스 쪽 검증에 달려 있습니다. 파일을 넣는 순간 위 위험이 그대로 생기니 실행 전에 확인하세요.\n- **Variant C를 쓰려면**: 01 Source Dance Video 그룹 **LoadVideo #15의 출력 `VIDEO`** 점을 끌어 **#34의 입력 `video`**에 놓으세요. 자동으로 연결하지 않았습니다 — 연결하면 Beeble 1080p 유료 호출이 1개 늘어날 수 있습니다.\n- 마스크 영상 #27 · #31 · #33(`58ffdb54…mp4`, 파일명 축약)은 원본 #15(`c7849269…mp4`, 파일명 축약)와 **프레임 수가 같고 알파 채널이 있어야** 합니다. 프레임 수가 다르면 Beeble이 오류를 내고, 알파가 없으면 VHS가 빈 64×64 마스크를 넘깁니다. 확실하지 않으면 alpha_mode를 `auto` 또는 `select`로 바꾸세요.\n\n### 2. Queue 1회에 켜진 유료 출력이 함께 실행·과금될 수 있음\n이 워크플로에는 음소거된 유료 노드가 없습니다. 입력 파일·계정·서비스 검증이 모두 통과하면 Queue 1회에 아래가 **함께** 실행·과금될 수 있습니다.\n\n| 노드 | 그룹 | 가격식 (ComfyUI 소스 c85957a 표기) |\n|---|---|---|\n| #18 Grok 영상 편집 | 02 | 약 $0.06/초 |\n| #21 Gemini Omni (교체 권고 노드) | 03 | 약 $0.1449/초, 출력 3–10초 |\n| #43 Runway Aleph2 | 03 | $0.4004/초 |\n| #26 Beeble A 720p | 04 | $0.143/30프레임 |\n| #29 Beeble B 1080p | 05 | $0.429/30프레임 |\n| #34 Beeble C 1080p | 06 | $0.429/30프레임 (지금은 미연결이라 실행 안 됨) |\n\n조건부 추정 합계 — **모든 입력·계정이 유효하고 각 호출이 성공한다고 가정할 때**: 원본 5초·30fps면 지금 약 $5.60–6.61 / #34 연결 후 약 $7.74–8.76, 원본 8초·30fps면 지금 약 $8.69–9.71 / 연결 후 약 $12.13–13.14.\n\n- **원치 않는 분기 끄기**: 그 분기의 **유료 노드와 그 저장 노드를 함께 선택 → Ctrl+M(음소거)**. Bypass(Ctrl+B)는 입력 영상을 그대로 넘길 수 있어 권하지 않습니다.\n- **실행 전 확인**: 노드 위 가격 배지와 Comfy 계정 크레딧을 확인하세요.\n- Beeble은 원본이 **240프레임(30fps 8초)을 넘으면 실행 중 오류**가 납니다. 같은 Queue의 다른 유료 노드는 그 전에 과금될 수 있습니다.\n- 금액은 소스 가격식으로 계산한 조건부 추정치이며 청구액이 아닙니다."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 49,
+      "type": "MarkdownNote",
+      "title": "2026-11-07 · 이번 수정 및 검증 범위",
+      "pos": [
+        640,
+        2431
+      ],
+      "size": [
+        920,
+        450
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "MarkdownNote",
+        "cnr_id": "comfy-core"
+      },
+      "widgets_values": [
+        "## 이번 수정본\n- CreateVideo 구형 위젯 순서 1곳을 현재 5개 입력 규격에 맞춤.\n- 영상 저장 설정 7곳 정규화: 일반 MP4 H.264 CRF18, 기존 CRF16/ProRes 유지. 배열·이름 저장값 동기화.\n\n검증: JSON·연결·서브그래프 제어값 정적 검사. 이 파일의 GPU 생성·속도·화질 A/B는 미실행. 원문 안내에 적힌 과거 실행 성공/초 단위 수치는 이번 검증 결과가 아닙니다.\n\nRTX PRO 6000도 긴 영상 전체 처리에서는 RAM/VRAM 부담이 큽니다. 1개 짧은 샷부터 확인하세요. 미리보기·추가 출력은 필요한 것만 실행하세요."
+      ]
+    }
+  ],
+  "links": [
+    [
+      19,
+      15,
+      0,
+      18,
+      0,
+      "VIDEO"
+    ],
+    [
+      20,
+      18,
+      0,
+      19,
+      0,
+      "VIDEO"
+    ],
+    [
+      21,
+      21,
+      0,
+      20,
+      0,
+      "VIDEO"
+    ],
+    [
+      23,
+      15,
+      0,
+      21,
+      2,
+      "VIDEO"
+    ],
+    [
+      24,
+      18,
+      0,
+      23,
+      0,
+      "VIDEO"
+    ],
+    [
+      26,
+      23,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ],
+    [
+      27,
+      25,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      28,
+      15,
+      0,
+      26,
+      0,
+      "VIDEO"
+    ],
+    [
+      29,
+      27,
+      1,
+      26,
+      2,
+      "MASK"
+    ],
+    [
+      30,
+      28,
+      0,
+      26,
+      1,
+      "IMAGE"
+    ],
+    [
+      32,
+      32,
+      0,
+      29,
+      1,
+      "IMAGE"
+    ],
+    [
+      33,
+      31,
+      1,
+      29,
+      2,
+      "MASK"
+    ],
+    [
+      34,
+      15,
+      0,
+      29,
+      0,
+      "VIDEO"
+    ],
+    [
+      35,
+      35,
+      0,
+      34,
+      1,
+      "IMAGE"
+    ],
+    [
+      36,
+      33,
+      1,
+      34,
+      2,
+      "MASK"
+    ],
+    [
+      37,
+      26,
+      0,
+      36,
+      0,
+      "VIDEO"
+    ],
+    [
+      38,
+      29,
+      0,
+      37,
+      0,
+      "VIDEO"
+    ],
+    [
+      39,
+      34,
+      0,
+      38,
+      0,
+      "VIDEO"
+    ],
+    [
+      43,
+      41,
+      0,
+      43,
+      1,
+      "RUNWAY_ALEPH2_KEYFRAME"
+    ],
+    [
+      44,
+      15,
+      0,
+      43,
+      0,
+      "VIDEO"
+    ],
+    [
+      45,
+      43,
+      0,
+      45,
+      0,
+      "VIDEO"
+    ],
+    [
+      46,
+      46,
+      0,
+      41,
+      0,
+      "IMAGE"
+    ],
+    [
+      47,
+      24,
+      0,
+      47,
+      0,
+      "VIDEO"
+    ],
+    [
+      48,
+      46,
+      0,
+      21,
+      0,
+      "IMAGE"
+    ],
+    [
+      49,
+      23,
+      2,
+      24,
+      2,
+      "FLOAT"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "01 Source Dance Video",
+      "bounding": [
+        1380.1633522727275,
+        2941.271306818183,
+        740,
+        1460
+      ],
+      "color": "#007DA6",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "02 Grok Prompt Edit + RTX Upscale",
+      "bounding": [
+        2154.886363636365,
+        2950.7208806818176,
+        1780,
+        980
+      ],
+      "color": "#078563",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "03 Gemini Image + Video Edit",
+      "bounding": [
+        2170.8877840909095,
+        3977.425426136365,
+        1769.715567371732,
+        1135.4825345216232
+      ],
+      "color": "#008EB5",
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "04 Beeble Variant A",
+      "bounding": [
+        3962.6693257613624,
+        2958.7996581909483,
+        1470,
+        760
+      ],
+      "color": "#237DCC",
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "05 Beeble Variant B",
+      "bounding": [
+        3960.134641115578,
+        3737.9791752683836,
+        1470,
+        760
+      ],
+      "color": "#237DCC",
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "06 Beeble Variant C",
+      "bounding": [
+        3962.146897097694,
+        4550.9716059688735,
+        1470,
+        760
+      ],
+      "color": "#237DCC",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.39252816194194495,
+      "offset": [
+        -1447.3617583482785,
+        -2767.2801279490277
+      ]
+    },
+    "frontendVersion": "1.49.3",
+    "VHS_KeepIntermediate": true,
+    "VHS_MetadataImage": true,
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "full_development_audit": {
+      "changes": [
+        {
+          "node": 24,
+          "change": "Output FPS follows source × 1; preserves source duration"
+        }
+      ],
+      "runtime_verified": false
+    },
+    "studio_design": {
+      "version": "2026-09-13.4-role-colors",
+      "method": "Restore authored functional groups; use functional stage columns only where absent",
+      "execution_settings_preserved": true,
+      "cloud_visual_verified": false,
+      "new_custom_node_dependencies": [],
+      "provider_palette": {
+        "Google": [
+          "#1259B4",
+          "#102D52"
+        ],
+        "OpenAI": [
+          "#087A4C",
+          "#103D2B"
+        ],
+        "MiniMax": [
+          "#B52B62",
+          "#4B1730"
+        ],
+        "ByteDance": [
+          "#007D91",
+          "#0C3943"
+        ],
+        "WAN": [
+          "#2947BB",
+          "#1B2857"
+        ],
+        "LTX": [
+          "#BE4B0B",
+          "#51270F"
+        ],
+        "Qwen": [
+          "#7D2EBA",
+          "#391B52"
+        ],
+        "Z-Image": [
+          "#6F8500",
+          "#303B10"
+        ],
+        "Kling": [
+          "#BC3426",
+          "#4E211B"
+        ],
+        "Grok": [
+          "#3B697F",
+          "#203744"
+        ],
+        "Runway": [
+          "#9B620C",
+          "#443111"
+        ],
+        "Beeble": [
+          "#A78A00",
+          "#443C0F"
+        ],
+        "Local / Utility": [
+          "#354457",
+          "#1D2938"
+        ],
+        "Mixed": [
+          "#50536D",
+          "#292B40"
+        ]
+      },
+      "role_palette": {
+        "image": [
+          "#008EB5",
+          "#125873"
+        ],
+        "video": [
+          "#BE398A",
+          "#702853"
+        ],
+        "input": [
+          "#007DA6",
+          "#164D67"
+        ],
+        "control": [
+          "#B37A00",
+          "#695015"
+        ],
+        "model": [
+          "#485BD4",
+          "#303B83"
+        ],
+        "lora": [
+          "#AB398C",
+          "#632750"
+        ],
+        "prompt": [
+          "#078563",
+          "#18563F"
+        ],
+        "mask": [
+          "#CA4054",
+          "#722D3A"
+        ],
+        "depth": [
+          "#168B99",
+          "#235965"
+        ],
+        "sampling": [
+          "#CF641D",
+          "#75401E"
+        ],
+        "decode": [
+          "#7E45C2",
+          "#4D3279"
+        ],
+        "output": [
+          "#318A34",
+          "#285829"
+        ],
+        "process": [
+          "#237DCC",
+          "#244D78"
+        ],
+        "note": [
+          "#9A6D3B",
+          "#55422E"
+        ]
+      },
+      "color_method": "Distinct saturated node bodies and groups by functional role"
+    },
+    "optimization_review": {
+      "date": "2026-11-07",
+      "source": "1107_2/유료api/Beeble_조명편집_멀티모델__실행미검증.json",
+      "gpu_tested": false,
+      "changes": [
+        "CreateVideo 구형 위젯 순서 1곳을 현재 5개 입력 규격에 맞춤.",
+        "영상 저장 설정 7곳 정규화: 일반 MP4 H.264 CRF18, 기존 CRF16/ProRes 유지. 배열·이름 저장값 동기화."
+      ]
+    }
+  },
+  "version": 0.4
+}
