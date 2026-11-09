@@ -172,7 +172,7 @@
     "ver": "0df64eb242b7c5759c3e86afd5d1846d923b1033"
    },
    "widgets_values": [
-    "## 현재 상태 · Claude Cloud 검증 (2026-11-08)\n시험 입력: 576x1024·73프레임·24fps 실사 클립(검은 니트·와인병, f40→41 하드컷 포함 — 단일 샷 아님), 승인 패딩 첫 프레임, 독립 패딩 사진, 사용자 빈 주방 사진 등.\n판정: GPU 성공(임시 입력)\n결과: H3 CharacterSwap: 임시 인물(노란 레인코트 여성)로 SAM3 인물 영역 교체, 동작·병·배경 유지, 64.4s, 교체 밖(출력차이 휴리스틱) mae3~4.8\n주의: H3·WAN·LTX 생성은 프레임 전체를 다시 그립니다(마스크 합성형 제외). 편집 영역 밖 보존은 원본 SAM 고정 영역(머리·손/병/배경) 수치로 확인했고 픽셀 보존을 주장하지 않습니다. '(출력차이 휴리스틱)' 표시 수치는 큰 변형을 제외할 수 있는 이전 방식입니다.\n\n---\n### 이전 안내 (Codex 작성 · 위 '현재 상태'가 우선)\n## 인물·의상 교체 · Character Swap (H3) — 대표 (구 HeadSwap 얼굴마스크와 같은 교체 계열)\n\n**입력**: ① 원본 영상 ② 교체할 인물 이미지. SAM3 자동 추적 영역만 교체, 나머지 원본 픽셀.\n- 구 HeadSwap(얼굴 마스크 영상 필요)은 같은 교체 계열 → 제외 (머리만 바꿀 땐 같은 폴더 01_H3_HeadSwap 사용).\n- SAM3 자동 마스크 합성 경계: 딱딱한 이진 경계 → 생성 범위 안에서 확장+페더 (경계선 제거), 마스크 밖은 원본 픽셀.\n- 출력 = 원본 **가로×세로 · 프레임 수 · FPS** 그대로 (32배수 패딩·17k+5 프레임 패딩 후 정확히 복원 · 마지막에 W/H/N 검사, 다르면 중단) — 기존 구조 유지.\n- 실행 1회 = 저장 결과 1개 + 임시 SAM 번호 프리뷰.\n- **내부 추론 MP 기본 1.03** = H3 공식 학습 캔버스(짧은 변 768 · 최대 768×1344, ComfyUI H3 노드 소스). 1080p 원본을 원본 크기(2.1MP)로 돌리면 학습 범위 2배 밖 → 반복·뭉개짐 위험과 2~3배 시간. 0 = 원본 크기(실험용).\n\n[검증] 로컬 ComfyUI(코어+LTXVideo+KJ+VHS 최신)에서 노드 스키마 검증 + 모델 단계를 대체한 전후처리 실행 검증 완료 (가로×세로·프레임 수·FPS·프레임 정렬·보호영역 픽셀). Cloud GPU 실제 생성은 미실행.\n\n**2026-10-14 재검토 수정**: 메인 노드 안쪽 값이 프런트엔드에서 한 칸씩 밀려 SAM3 감지 임계값 0.5 → 1 · 최대 개수 4 → 빈 값으로 밀리던 것 → 값 순서를 프런트엔드 규칙대로 재정렬 (실제 로드 후 실행 그래프 일치 확인).\n\n### 2026-10-21 · Comfy Cloud 실행 검증 수정\n- 모델 파일명을 Comfy Cloud 등록명으로 교정 (기존 이름은 Cloud에서 `value_not_in_list` 검증 오류): `h3_character_swap_pro4500_1000.safetensors` → `akatz-ai__…`. 로컬 ComfyUI에서는 원래 파일명으로 바꿔 쓰세요.\n- (이전 측정 · 현재 구조의 시험 결과는 맨 위 2026-11-08 항목 참조) Cloud 실측 (가상 인물 사진 · 기본 프롬프트): Character Swap V1 LoRA로는 얼굴·머리만 사진 인물로 바뀌고 옷·체형은 원본 그대로. 모델 카드 프롬프트, V1.5 LoRA, 카드 레시피(Turbo 8step · er_sde)로는 이 구조에서 교체가 일어나지 않음(원본과 거의 같음). 카드의 공식 파이프라인은 H3 Relay 커스텀 노드(H3RelayPrepareSource · SelectMask · RecoverMasks · WindowPlan 등)를 쓰며 Comfy Cloud에는 없음 → 의상·전신까지 바꾸려면 로컬에서 공식 워크플로 사용.\n\n카드 권장(V1.5 · fl2v Turbo 8step · er_sde/normal)과 다른 설정입니다. 현재 노이즈 마스크 구조에서 카드 레시피를 다시 시험했는지는 기록이 없습니다."
+    "### 2026-11-09 LoRA 교체\nCharacter Swap V1 → **V1.5**. 이 그래프(Turbo 4스텝) 그대로 Cloud에서 1회 실행해 인물과 옷이 참고 사진대로 바뀌고 배경이 유지되는 것을 확인했습니다. 아래 이전 기록의 \"V1.5는 교체가 일어나지 않음\"은 다른 설정(Turbo 8스텝 · er_sde)의 결과입니다. V1과 같은 입력으로 직접 비교하지는 않았습니다.\n\n## 현재 상태 · Claude Cloud 검증 (2026-11-08)\n시험 입력: 576x1024·73프레임·24fps 실사 클립(검은 니트·와인병, f40→41 하드컷 포함 — 단일 샷 아님), 승인 패딩 첫 프레임, 독립 패딩 사진, 사용자 빈 주방 사진 등.\n판정: GPU 성공(임시 입력)\n결과: H3 CharacterSwap: 임시 인물(노란 레인코트 여성)로 SAM3 인물 영역 교체, 동작·병·배경 유지, 64.4s, 교체 밖(출력차이 휴리스틱) mae3~4.8\n주의: H3·WAN·LTX 생성은 프레임 전체를 다시 그립니다(마스크 합성형 제외). 편집 영역 밖 보존은 원본 SAM 고정 영역(머리·손/병/배경) 수치로 확인했고 픽셀 보존을 주장하지 않습니다. '(출력차이 휴리스틱)' 표시 수치는 큰 변형을 제외할 수 있는 이전 방식입니다.\n\n---\n### 이전 안내 (Codex 작성 · 위 '현재 상태'가 우선)\n## 인물·의상 교체 · Character Swap (H3) — 대표 (구 HeadSwap 얼굴마스크와 같은 교체 계열)\n\n**입력**: ① 원본 영상 ② 교체할 인물 이미지. SAM3 자동 추적 영역만 교체, 나머지 원본 픽셀.\n- 구 HeadSwap(얼굴 마스크 영상 필요)은 같은 교체 계열 → 제외 (머리만 바꿀 땐 같은 폴더 01_H3_HeadSwap 사용).\n- SAM3 자동 마스크 합성 경계: 딱딱한 이진 경계 → 생성 범위 안에서 확장+페더 (경계선 제거), 마스크 밖은 원본 픽셀.\n- 출력 = 원본 **가로×세로 · 프레임 수 · FPS** 그대로 (32배수 패딩·17k+5 프레임 패딩 후 정확히 복원 · 마지막에 W/H/N 검사, 다르면 중단) — 기존 구조 유지.\n- 실행 1회 = 저장 결과 1개 + 임시 SAM 번호 프리뷰.\n- **내부 추론 MP 기본 1.03** = H3 공식 학습 캔버스(짧은 변 768 · 최대 768×1344, ComfyUI H3 노드 소스). 1080p 원본을 원본 크기(2.1MP)로 돌리면 학습 범위 2배 밖 → 반복·뭉개짐 위험과 2~3배 시간. 0 = 원본 크기(실험용).\n\n[검증] 로컬 ComfyUI(코어+LTXVideo+KJ+VHS 최신)에서 노드 스키마 검증 + 모델 단계를 대체한 전후처리 실행 검증 완료 (가로×세로·프레임 수·FPS·프레임 정렬·보호영역 픽셀). Cloud GPU 실제 생성은 미실행.\n\n**2026-10-14 재검토 수정**: 메인 노드 안쪽 값이 프런트엔드에서 한 칸씩 밀려 SAM3 감지 임계값 0.5 → 1 · 최대 개수 4 → 빈 값으로 밀리던 것 → 값 순서를 프런트엔드 규칙대로 재정렬 (실제 로드 후 실행 그래프 일치 확인).\n\n### 2026-10-21 · Comfy Cloud 실행 검증 수정\n- 모델 파일명을 Comfy Cloud 등록명으로 교정 (기존 이름은 Cloud에서 `value_not_in_list` 검증 오류): `h3_character_swap_pro4500_1000.safetensors` → `akatz-ai__…`. 로컬 ComfyUI에서는 원래 파일명으로 바꿔 쓰세요.\n- (이전 측정 · 현재 구조의 시험 결과는 맨 위 2026-11-08 항목 참조) Cloud 실측 (가상 인물 사진 · 기본 프롬프트): Character Swap V1 LoRA로는 얼굴·머리만 사진 인물로 바뀌고 옷·체형은 원본 그대로. 모델 카드 프롬프트, V1.5 LoRA, 카드 레시피(Turbo 8step · er_sde)로는 이 구조에서 교체가 일어나지 않음(원본과 거의 같음). 카드의 공식 파이프라인은 H3 Relay 커스텀 노드(H3RelayPrepareSource · SelectMask · RecoverMasks · WindowPlan 등)를 쓰며 Comfy Cloud에는 없음 → 의상·전신까지 바꾸려면 로컬에서 공식 워크플로 사용.\n\n카드 권장(V1.5 · fl2v Turbo 8step · er_sde/normal)과 다른 설정입니다. 현재 노이즈 마스크 구조에서 카드 레시피를 다시 시험했는지는 기록이 없습니다."
    ],
    "color": "#897343",
    "bgcolor": "#302b22"
@@ -697,11 +697,11 @@
      "weight_commit": "3f57e8291d2ef846f9a074b1b76d2767db434abe"
     },
     {
-     "name": "akatz-ai__MiniMax-H3-Character-Swap-LoRA__h3_character_swap_pro4500_1000.safetensors",
-     "url": "https://huggingface.co/akatz-ai/MiniMax-H3-Character-Swap-LoRA/resolve/a665bb7e3bb9804e487d2925f67744f554c8ad49/h3_character_swap_pro4500_1000.safetensors",
+     "name": "akatz-ai__MiniMax-H3-Character-Swap-LoRA__h3_character_swap_v1.5.safetensors",
+     "url": "https://huggingface.co/akatz-ai/MiniMax-H3-Character-Swap-LoRA/resolve/main/h3_character_swap_v1.5.safetensors",
      "directory": "loras",
      "repo": "akatz-ai/MiniMax-H3-Character-Swap-LoRA",
-     "source_path": "akatz-ai__MiniMax-H3-Character-Swap-LoRA__h3_character_swap_pro4500_1000.safetensors",
+     "source_path": "akatz-ai__MiniMax-H3-Character-Swap-LoRA__h3_character_swap_v1.5.safetensors",
      "revision": "a665bb7e3bb9804e487d2925f67744f554c8ad49",
      "weight_updated_at_utc": "2026-09-25T08:17:52.000Z",
      "weight_commit": "5823b1d659a9d76889ef24b8b23941102bb000d3"
@@ -4158,14 +4158,14 @@
        "ver": "0df64eb242b7c5759c3e86afd5d1846d923b1033",
        "models": [
         {
-         "name": "akatz-ai__MiniMax-H3-Character-Swap-LoRA__h3_character_swap_pro4500_1000.safetensors",
-         "url": "https://huggingface.co/akatz-ai/MiniMax-H3-Character-Swap-LoRA/resolve/a665bb7e3bb9804e487d2925f67744f554c8ad49/h3_character_swap_pro4500_1000.safetensors",
+         "name": "akatz-ai__MiniMax-H3-Character-Swap-LoRA__h3_character_swap_v1.5.safetensors",
+         "url": "https://huggingface.co/akatz-ai/MiniMax-H3-Character-Swap-LoRA/resolve/main/h3_character_swap_v1.5.safetensors",
          "directory": "loras"
         }
        ]
       },
       "widgets_values": [
-       "akatz-ai__MiniMax-H3-Character-Swap-LoRA__h3_character_swap_pro4500_1000.safetensors",
+       "akatz-ai__MiniMax-H3-Character-Swap-LoRA__h3_character_swap_v1.5.safetensors",
        1
       ],
       "color": "#31506a",
@@ -7875,7 +7875,7 @@
        "sam3.1_multiplex_fp16.safetensors",
        "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
        "default",
-       "akatz-ai__MiniMax-H3-Character-Swap-LoRA__h3_character_swap_pro4500_1000.safetensors",
+       "akatz-ai__MiniMax-H3-Character-Swap-LoRA__h3_character_swap_v1.5.safetensors",
        1,
        12,
        "minimax_h3_video_vae_int8_convrot.safetensors",
@@ -7889,7 +7889,7 @@
        "ctl_24_ckpt_name": "sam3.1_multiplex_fp16.safetensors",
        "ctl_43_unet_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
        "ctl_43_weight_dtype": "default",
-       "ctl_44_lora_name": "akatz-ai__MiniMax-H3-Character-Swap-LoRA__h3_character_swap_pro4500_1000.safetensors",
+       "ctl_44_lora_name": "akatz-ai__MiniMax-H3-Character-Swap-LoRA__h3_character_swap_v1.5.safetensors",
        "ctl_44_strength_model": 1,
        "ctl_45_shift_video": 12,
        "ctl_46_vae_name": "minimax_h3_video_vae_int8_convrot.safetensors",

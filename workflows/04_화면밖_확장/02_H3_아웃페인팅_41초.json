@@ -171,7 +171,7 @@
     "ver": "0df64eb242b7c5759c3e86afd5d1846d923b1033"
    },
    "widgets_values": [
-    "## 현재 상태 · Claude Cloud 검증 (2026-11-08)\n시험 입력: 576x1024·73프레임·24fps 실사 클립(검은 니트·와인병, f40→41 하드컷 포함 — 단일 샷 아님), 승인 패딩 첫 프레임, 독립 패딩 사진, 사용자 빈 주방 사진 등.\n판정: GPU 성공\n결과: H3 아웃페인팅 16:9 1820x1024, 가운데 원본 576 영역 mae1.40~1.47, 40.5s\n주의: 모델은 캔버스 전체를 다시 그리지만, 원본 영역은 원본 프레임을 확장 캔버스에 다시 합성해 되살립니다(확장된 변만 16px 페더). 결과에 새로 들어가는 것은 바깥 확장 영역뿐입니다. 저장할 때 SaveVideo가 H.264로 다시 인코딩합니다.\n\n---\n### 이전 안내 (Codex 작성 · 위 '현재 상태'가 우선)\n## 화면 밖 확장 · 아웃페인팅 (H3 Fun ControlNet 2.0)\n\n**입력**: 원본 영상 + 확장 환경 참조 이미지, 상하좌우 확장 픽셀. **출력**: 확장된 영상 1개 (원본 FPS·프레임 수).\n- 원본 영역은 원본 픽셀로 다시 붙임 (원본 1:1 · 축소 없음 — 기존 구조).\n- 수정: 원본을 **딱딱한 사각형**으로 붙여 경계선이 보이던 것 → **확장된 변에만 16px 페더** (확장 안 한 변은 픽셀 그대로).\n- 출력 = **확장된 가로×세로** (원본 + 상하좌우 확장 px) · 원본 **프레임 수 · FPS** 그대로 (17k+5 프레임 패딩 후 정확히 복원) — 기존 구조 유지. (실측: 640×360 → 기본 확장으로 1152×360)\n- 실행 1회 = **결과 1개** (마스크 미리보기 출력 제거).\n- **내부 추론 MP 기본 1.03** = H3 공식 학습 캔버스(짧은 변 768 · 최대 768×1344, ComfyUI H3 노드 소스). 1080p 원본을 원본 크기(2.1MP)로 돌리면 학습 범위 2배 밖 → 반복·뭉개짐 위험과 2~3배 시간. 0 = 원본 크기(실험용).\n\n[검증] 로컬 ComfyUI(코어+LTXVideo+KJ+VHS 최신)에서 노드 스키마 검증 + 모델 단계를 대체한 전후처리 실행 검증 완료 (가로×세로·프레임 수·FPS·프레임 정렬·보호영역 픽셀). Cloud GPU 실제 생성은 미실행.\n\n**2026-10-14 재검토 수정**: 메인 노드 안쪽 값이 프런트엔드에서 한 칸씩 밀려 ControlNet 모델명 → \"1\" · 강도 → \"euler\" · 시작 % → \"simple\"로 밀려 **Cloud에서 실행 오류**가 나던 것 → 값 순서를 프런트엔드 규칙대로 재정렬 (실제 로드 후 실행 그래프 일치 확인).\n\n### 2026-10-21 · Comfy Cloud 실행 검증 수정\n- 모델 파일명을 Comfy Cloud 등록명으로 교정 (기존 이름은 Cloud에서 `value_not_in_list` 검증 오류): `minimax_h3_fun_controlnet_union_2.0_pruned_int8_convrot.safetensors` → `Comfy-Org__…`. 로컬 ComfyUI에서는 원래 파일명으로 바꿔 쓰세요.\n- 보라색 **🖼 확장 종횡비** 노드에서 ◀ ▶ 로 비율을 넘겨 고르면, 원본 영상 크기에 맞춰 확장 영역이 자동 계산됩니다. 원본보다 가로가 넓은 비율이면 좌우로, 세로가 긴 비율이면 위아래로 같은 폭만큼 늘어납니다 (원본은 가운데 그대로).\n- 목록에 없는 비율은 노드 맨 아래 빈 칸에 입력하면 목록에 추가됩니다: `5:4`, `2.39:1`, `1.9:1`, `1920x800`(픽셀 크기도 비율로 계산), `2.35`(=2.35:1). 숫자 뒤 설명은 자유롭게 붙여도 됩니다 (예: `2:1 · 유니비지움`).\n- 원본과 같은 비율(또는 원본이 이미 그보다 넓은/긴 비율)을 고르면 확장 없이 원본 크기 그대로 나옵니다.\n- **레퍼런스 이미지 없이** 원본 영상만으로 확장하는 것이 기본입니다 (레퍼런스 노드 바이패스 · 기본 지시문에서 <Picture 1> 제거). 환경 이미지를 쓰려면 Ctrl+B로 바이패스를 풀고 지시문에 'using <Picture 1> as the environment reference'를 넣으세요.\n- 왼쪽/오른쪽/위쪽/아래쪽 확장 픽셀은 종횡비 목록의 '수동' 항목을 골랐을 때만 쓰입니다. 자동 계산은 출력 가로·세로가 짝수가 되도록 맞춥니다(H.264).\n\n---\n### ⚡ Turbo 4스텝판 (2026-11-07)\n- 스텝 28 → **4**. 모델 칸에 lightx2v H3 Turbo LoRA를 추가했습니다: `minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors`.\n- Sigma 12 / 3 · euler · simple · CFG 1은 기존 그대로, 용도별 LoRA·ControlNet도 그대로입니다.\n- Cloud 실제 실행 (576×736 → 1308×736 · 124프레임 · 같은 시드): **62초** (28스텝 279초). 확장 영역 구성은 28스텝과 거의 같고, 원본 영역은 PSNR 약 40dB로 보존됩니다.\n- 결과가 부족하면 같은 이름의 원본(28스텝) 파일을 쓰세요.\n- HyperFlow H3 Flash는 전용 커스텀 노드(HyperFlow GGUF Loader + ComfyUI-GGUF)가 있어야 돌아가서 Comfy Cloud에서는 쓸 수 없습니다. 대신 같은 효과(스텝 축소)를 코어 노드용 lightx2v Turbo LoRA로 냈습니다."
+    "### 2026-11-09 Turbo LoRA 교체\nref2v 4스텝 v0.1 → **v1.0 768p**. Cloud에서 같은 입력·시드로 비교했을 때 원본 영역 차이는 v0.1 4.56~4.77, v1.0 4.52~4.74로 나빠지지 않았습니다(영상 1건 기준).\n\n## 현재 상태 · Claude Cloud 검증 (2026-11-08)\n시험 입력: 576x1024·73프레임·24fps 실사 클립(검은 니트·와인병, f40→41 하드컷 포함 — 단일 샷 아님), 승인 패딩 첫 프레임, 독립 패딩 사진, 사용자 빈 주방 사진 등.\n판정: GPU 성공\n결과: H3 아웃페인팅 16:9 1820x1024, 가운데 원본 576 영역 mae1.40~1.47, 40.5s\n주의: 모델은 캔버스 전체를 다시 그리지만, 원본 영역은 원본 프레임을 확장 캔버스에 다시 합성해 되살립니다(확장된 변만 16px 페더). 결과에 새로 들어가는 것은 바깥 확장 영역뿐입니다. 저장할 때 SaveVideo가 H.264로 다시 인코딩합니다.\n\n---\n### 이전 안내 (Codex 작성 · 위 '현재 상태'가 우선)\n## 화면 밖 확장 · 아웃페인팅 (H3 Fun ControlNet 2.0)\n\n**입력**: 원본 영상 + 확장 환경 참조 이미지, 상하좌우 확장 픽셀. **출력**: 확장된 영상 1개 (원본 FPS·프레임 수).\n- 원본 영역은 원본 픽셀로 다시 붙임 (원본 1:1 · 축소 없음 — 기존 구조).\n- 수정: 원본을 **딱딱한 사각형**으로 붙여 경계선이 보이던 것 → **확장된 변에만 16px 페더** (확장 안 한 변은 픽셀 그대로).\n- 출력 = **확장된 가로×세로** (원본 + 상하좌우 확장 px) · 원본 **프레임 수 · FPS** 그대로 (17k+5 프레임 패딩 후 정확히 복원) — 기존 구조 유지. (실측: 640×360 → 기본 확장으로 1152×360)\n- 실행 1회 = **결과 1개** (마스크 미리보기 출력 제거).\n- **내부 추론 MP 기본 1.03** = H3 공식 학습 캔버스(짧은 변 768 · 최대 768×1344, ComfyUI H3 노드 소스). 1080p 원본을 원본 크기(2.1MP)로 돌리면 학습 범위 2배 밖 → 반복·뭉개짐 위험과 2~3배 시간. 0 = 원본 크기(실험용).\n\n[검증] 로컬 ComfyUI(코어+LTXVideo+KJ+VHS 최신)에서 노드 스키마 검증 + 모델 단계를 대체한 전후처리 실행 검증 완료 (가로×세로·프레임 수·FPS·프레임 정렬·보호영역 픽셀). Cloud GPU 실제 생성은 미실행.\n\n**2026-10-14 재검토 수정**: 메인 노드 안쪽 값이 프런트엔드에서 한 칸씩 밀려 ControlNet 모델명 → \"1\" · 강도 → \"euler\" · 시작 % → \"simple\"로 밀려 **Cloud에서 실행 오류**가 나던 것 → 값 순서를 프런트엔드 규칙대로 재정렬 (실제 로드 후 실행 그래프 일치 확인).\n\n### 2026-10-21 · Comfy Cloud 실행 검증 수정\n- 모델 파일명을 Comfy Cloud 등록명으로 교정 (기존 이름은 Cloud에서 `value_not_in_list` 검증 오류): `minimax_h3_fun_controlnet_union_2.0_pruned_int8_convrot.safetensors` → `Comfy-Org__…`. 로컬 ComfyUI에서는 원래 파일명으로 바꿔 쓰세요.\n- 보라색 **🖼 확장 종횡비** 노드에서 ◀ ▶ 로 비율을 넘겨 고르면, 원본 영상 크기에 맞춰 확장 영역이 자동 계산됩니다. 원본보다 가로가 넓은 비율이면 좌우로, 세로가 긴 비율이면 위아래로 같은 폭만큼 늘어납니다 (원본은 가운데 그대로).\n- 목록에 없는 비율은 노드 맨 아래 빈 칸에 입력하면 목록에 추가됩니다: `5:4`, `2.39:1`, `1.9:1`, `1920x800`(픽셀 크기도 비율로 계산), `2.35`(=2.35:1). 숫자 뒤 설명은 자유롭게 붙여도 됩니다 (예: `2:1 · 유니비지움`).\n- 원본과 같은 비율(또는 원본이 이미 그보다 넓은/긴 비율)을 고르면 확장 없이 원본 크기 그대로 나옵니다.\n- **레퍼런스 이미지 없이** 원본 영상만으로 확장하는 것이 기본입니다 (레퍼런스 노드 바이패스 · 기본 지시문에서 <Picture 1> 제거). 환경 이미지를 쓰려면 Ctrl+B로 바이패스를 풀고 지시문에 'using <Picture 1> as the environment reference'를 넣으세요.\n- 왼쪽/오른쪽/위쪽/아래쪽 확장 픽셀은 종횡비 목록의 '수동' 항목을 골랐을 때만 쓰입니다. 자동 계산은 출력 가로·세로가 짝수가 되도록 맞춥니다(H.264).\n\n---\n### ⚡ Turbo 4스텝판 (2026-11-07)\n- 스텝 28 → **4**. 모델 칸에 lightx2v H3 Turbo LoRA를 추가했습니다: `lightx2v__Minimax-h3-Turbo__minimax_h3_ref2v_turbo_4step_v1.0_768p_comfyui_bf16.safetensors`.\n- Sigma 12 / 3 · euler · simple · CFG 1은 기존 그대로, 용도별 LoRA·ControlNet도 그대로입니다.\n- Cloud 실제 실행 (576×736 → 1308×736 · 124프레임 · 같은 시드): **62초** (28스텝 279초). 확장 영역 구성은 28스텝과 거의 같고, 원본 영역은 PSNR 약 40dB로 보존됩니다.\n- 결과가 부족하면 같은 이름의 원본(28스텝) 파일을 쓰세요.\n- HyperFlow H3 Flash는 전용 커스텀 노드(HyperFlow GGUF Loader + ComfyUI-GGUF)가 있어야 돌아가서 Comfy Cloud에서는 쓸 수 없습니다. 대신 같은 효과(스텝 축소)를 코어 노드용 lightx2v Turbo LoRA로 냈습니다."
    ],
    "color": "#897343",
    "bgcolor": "#302b22"
@@ -667,7 +667,7 @@
   },
   "turbo_2026_11_07": {
    "changes": [
-    "LoraLoaderModelOnly#89 추가 (minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors) · SigmaShift 앞",
+    "LoraLoaderModelOnly#89 추가 (lightx2v__Minimax-h3-Turbo__minimax_h3_ref2v_turbo_4step_v1.0_768p_comfyui_bf16.safetensors) · SigmaShift 앞",
     "KSampler#56 steps 28 → 4",
     "SigmaShift#50 shift_video 12 / 3"
    ],
@@ -5679,14 +5679,14 @@
        "cnr_id": "comfy-core",
        "models": [
         {
-         "name": "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
-         "url": "https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+         "name": "lightx2v__Minimax-h3-Turbo__minimax_h3_ref2v_turbo_4step_v1.0_768p_comfyui_bf16.safetensors",
+         "url": "https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_4step_v1.0_768p_comfyui_bf16.safetensors",
          "directory": "loras"
         }
        ]
       },
       "widgets_values": [
-       "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+       "lightx2v__Minimax-h3-Turbo__minimax_h3_ref2v_turbo_4step_v1.0_768p_comfyui_bf16.safetensors",
        1
       ],
       "color": "#2f5a3a",
