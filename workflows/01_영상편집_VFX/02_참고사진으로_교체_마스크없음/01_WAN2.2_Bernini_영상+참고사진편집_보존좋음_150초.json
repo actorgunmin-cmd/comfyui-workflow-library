@@ -340,8 +340,8 @@
     "You are a helpful assistant specialized in video editing with reference. Replace only the black knitted sweater worn by the man in <Video 1> with the bright red quilted puffer jacket shown in <Picture 1>. Match the red fabric, horizontal padded baffles, stand collar and front zipper. Preserve his face, hair, identity, hands, wine bottle, original body motion, camera framing, lighting and kitchen background.",
     "blurry, low quality, flicker, distorted anatomy, extra limbs, extra fingers, duplicate subjects, text, subtitles, watermark, camera shake",
     42,
-    "wan2.2_bernini_r_high_noise_fp8_scaled.safetensors",
-    "wan2.2_bernini_r_low_noise_fp8_scaled.safetensors",
+    "rzgar__Bernini-v2-ComfyUI__wan2.2_bernini_v2_srcFP32_high_noise_int8_convrot.safetensors",
+    "rzgar__Bernini-v2-ComfyUI__wan2.2_bernini_v2_srcFP32_low_noise_int8_convrot.safetensors",
     "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
     "Wan2_1_VAE_bf16.safetensors",
     "default",
@@ -357,8 +357,8 @@
     "value": "You are a helpful assistant specialized in video editing with reference. Replace only the black knitted sweater worn by the man in <Video 1> with the bright red quilted puffer jacket shown in <Picture 1>. Match the red fabric, horizontal padded baffles, stand collar and front zipper. Preserve his face, hair, identity, hands, wine bottle, original body motion, camera framing, lighting and kitchen background.",
     "text": "blurry, low quality, flicker, distorted anatomy, extra limbs, extra fingers, duplicate subjects, text, subtitles, watermark, camera shake",
     "noise_seed": 42,
-    "unet_name": "wan2.2_bernini_r_high_noise_fp8_scaled.safetensors",
-    "unet_name_1": "wan2.2_bernini_r_low_noise_fp8_scaled.safetensors",
+    "unet_name": "rzgar__Bernini-v2-ComfyUI__wan2.2_bernini_v2_srcFP32_high_noise_int8_convrot.safetensors",
+    "unet_name_1": "rzgar__Bernini-v2-ComfyUI__wan2.2_bernini_v2_srcFP32_low_noise_int8_convrot.safetensors",
     "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
     "vae_name": "Wan2_1_VAE_bf16.safetensors",
     "ctl_17_weight_dtype": "default",
@@ -445,7 +445,7 @@
     "cnr_id": "comfy-core"
    },
    "widgets_values": [
-    "## 현재 상태 · Claude Cloud 검증 (2026-11-08)\n시험 입력: 576x1024·73프레임·24fps 실사 클립(검은 니트·와인병, f40→41 하드컷 포함 — 단일 샷 아님), 승인 패딩 첫 프레임, 독립 패딩 사진, 사용자 빈 주방 사진 등.\n판정: GPU 성공\n결과: Bernini Fast6: 사진참조(이전 실행 재사용, job 프롬프트 전 리터럴 일치 확인) 149.8s·승인03 참조 151.5s, 편집 밖(출력차이 휴리스틱) mae2.8~4.6 얼굴2.4 [고정영역] 머리·손 mae 2.91~3.59(p95 7~8), 병 2.08~2.89, 배경 1.35~1.53(색 [-0.2, -1.1, -1.0])\n주의: H3·WAN·LTX 생성은 프레임 전체를 다시 그립니다(마스크 합성형 01_영상편집_VFX/04_마스크로_영역지정_원본보존 폴더의 파일과 03_지우기_리무브 폴더의 H3 PersonRemover 제외). 편집 영역 밖 보존은 원본 SAM 고정 영역(머리·손/병/배경) 수치로 확인했고 픽셀 보존을 주장하지 않습니다. '(출력차이 휴리스틱)' 표시 수치는 큰 변형을 제외할 수 있는 이전 방식입니다.\n\n---\n### 이전 안내 (Codex 작성 · 위 '현재 상태'가 우선)\n## 원본 영상 + 독립 참고 사진 · Bernini-R\n① 원본 영상 ② 참고 사진을 따로 넣고 프롬프트에서 <Video 1>의 어떤 대상을 <Picture 1>처럼 바꿀지 지정합니다.\n예제: 검은 니트 → 빨간 패딩. 얼굴, 손, 들고 있는 물건, 동작, 카메라, 배경은 보존하도록 지시했습니다. 마스크 없는 편집이므로 다른 픽셀의 완전 보존을 보장하지 않습니다.\n빠른 편집 기본 ON: 6스텝 / 전환3 / CFG1 / 가속 LoRA. OFF: 40스텝 / 전환20 / CFG5 / 가속 LoRA 없음. 전·후반 CFG와 모델·스텝을 함께 전환합니다. 보이는 비교 CFG5 입력은 OFF일 때만 적용됩니다.\n원본보다 키우지 않고 최대0.92MP로 추론, 저장 시 원본 크기·프레임수·FPS를 복원합니다. 무음 SDR입니다.\n실제 Cloud: 576×1024 · 73f · 24fps / 빠른6에서149.78초. 0/24/48/72프레임에서 빨간 패딩 유지. 사진의 큰 형태를 반영하지만 완전한 상품 복제는 아닙니다.\n참조가 약하면 바꿀 대상만 선명하고 크게 보이는 사진으로 수정해서 재시도하세요. 짧은 단일 샷으로 먼저 확인합니다.\n40스텝이 항상 더 낫지는 않습니다. 별도의41프레임 샘플에서6스텝26.13초,40스텝289.59초였으며 뚜렷한40스텝 우위는 확인하지 못했습니다."
+    "### 2026-11-10 모델 교체\nBernini-R → **Bernini v2 렌더러**(플래너 없이 사용, 커뮤니티 변환 int8). 파일 2개(각 약 14.5GB)는 문제 패널에서 가져오세요. Cloud 실행: 704×704·116프레임 영상에서 250초, 셔츠 교체가 끝까지 유지되고 마스크 기준 옷 밖 차이는 2.09~2.54였습니다. Bernini-R과 같은 입력으로 비교하지는 않았습니다. Bernini 전용 LoRA(rzgar)는 2.61~2.81로 시험했고 채택하지 않았습니다.\n\n## 현재 상태 · Claude Cloud 검증 (2026-11-08)\n시험 입력: 576x1024·73프레임·24fps 실사 클립(검은 니트·와인병, f40→41 하드컷 포함 — 단일 샷 아님), 승인 패딩 첫 프레임, 독립 패딩 사진, 사용자 빈 주방 사진 등.\n판정: GPU 성공\n결과: Bernini Fast6: 사진참조(이전 실행 재사용, job 프롬프트 전 리터럴 일치 확인) 149.8s·승인03 참조 151.5s, 편집 밖(출력차이 휴리스틱) mae2.8~4.6 얼굴2.4 [고정영역] 머리·손 mae 2.91~3.59(p95 7~8), 병 2.08~2.89, 배경 1.35~1.53(색 [-0.2, -1.1, -1.0])\n주의: H3·WAN·LTX 생성은 프레임 전체를 다시 그립니다(마스크 합성형 01_영상편집_VFX/04_마스크로_영역지정_원본보존 폴더의 파일과 03_지우기_리무브 폴더의 H3 PersonRemover 제외). 편집 영역 밖 보존은 원본 SAM 고정 영역(머리·손/병/배경) 수치로 확인했고 픽셀 보존을 주장하지 않습니다. '(출력차이 휴리스틱)' 표시 수치는 큰 변형을 제외할 수 있는 이전 방식입니다.\n\n---\n### 이전 안내 (Codex 작성 · 위 '현재 상태'가 우선)\n## 원본 영상 + 독립 참고 사진 · Bernini-R\n① 원본 영상 ② 참고 사진을 따로 넣고 프롬프트에서 <Video 1>의 어떤 대상을 <Picture 1>처럼 바꿀지 지정합니다.\n예제: 검은 니트 → 빨간 패딩. 얼굴, 손, 들고 있는 물건, 동작, 카메라, 배경은 보존하도록 지시했습니다. 마스크 없는 편집이므로 다른 픽셀의 완전 보존을 보장하지 않습니다.\n빠른 편집 기본 ON: 6스텝 / 전환3 / CFG1 / 가속 LoRA. OFF: 40스텝 / 전환20 / CFG5 / 가속 LoRA 없음. 전·후반 CFG와 모델·스텝을 함께 전환합니다. 보이는 비교 CFG5 입력은 OFF일 때만 적용됩니다.\n원본보다 키우지 않고 최대0.92MP로 추론, 저장 시 원본 크기·프레임수·FPS를 복원합니다. 무음 SDR입니다.\n실제 Cloud: 576×1024 · 73f · 24fps / 빠른6에서149.78초. 0/24/48/72프레임에서 빨간 패딩 유지. 사진의 큰 형태를 반영하지만 완전한 상품 복제는 아닙니다.\n참조가 약하면 바꿀 대상만 선명하고 크게 보이는 사진으로 수정해서 재시도하세요. 짧은 단일 샷으로 먼저 확인합니다.\n40스텝이 항상 더 낫지는 않습니다. 별도의41프레임 샘플에서6스텝26.13초,40스텝289.59초였으며 뚜렷한40스텝 우위는 확인하지 못했습니다."
    ]
   }
  ],
@@ -3612,7 +3612,7 @@
     },
     "revision": 0,
     "config": {},
-    "name": "WAN2.2 · Bernini · R · 공식 fp8 · 가속 LoRA는 WAN2.2 4스텝 (공식 템플릿과 다름)",
+    "name": "WAN2.2 · Bernini v2 렌더러 · 가속 LoRA는 WAN2.2 4스텝 (공식 템플릿과 다름)",
     "inputNode": {
      "id": -10,
      "bounding": [
@@ -3939,14 +3939,14 @@
        "cnr_id": "comfy-core",
        "models": [
         {
-         "name": "wan2.2_bernini_r_high_noise_fp8_scaled.safetensors",
-         "url": "https://huggingface.co/Comfy-Org/Bernini-R/resolve/main/diffusion_models/wan2.2_bernini_r_high_noise_fp8_scaled.safetensors",
+         "name": "rzgar__Bernini-v2-ComfyUI__wan2.2_bernini_v2_srcFP32_high_noise_int8_convrot.safetensors",
+         "url": "https://huggingface.co/rzgar/Bernini-v2-ComfyUI/resolve/main/Bernini_v2_int8_convrot_src_FP32/wan2.2_bernini_v2_srcFP32_high_noise_int8_convrot.safetensors",
          "directory": "diffusion_models"
         }
        ]
       },
       "widgets_values": [
-       "wan2.2_bernini_r_high_noise_fp8_scaled.safetensors",
+       "rzgar__Bernini-v2-ComfyUI__wan2.2_bernini_v2_srcFP32_high_noise_int8_convrot.safetensors",
        "default"
       ],
       "title": "고노이즈 편집 모델 · 전반부",
@@ -4004,14 +4004,14 @@
        "cnr_id": "comfy-core",
        "models": [
         {
-         "name": "wan2.2_bernini_r_low_noise_fp8_scaled.safetensors",
-         "url": "https://huggingface.co/Comfy-Org/Bernini-R/resolve/main/diffusion_models/wan2.2_bernini_r_low_noise_fp8_scaled.safetensors",
+         "name": "rzgar__Bernini-v2-ComfyUI__wan2.2_bernini_v2_srcFP32_low_noise_int8_convrot.safetensors",
+         "url": "https://huggingface.co/rzgar/Bernini-v2-ComfyUI/resolve/main/Bernini_v2_int8_convrot_src_FP32/wan2.2_bernini_v2_srcFP32_low_noise_int8_convrot.safetensors",
          "directory": "diffusion_models"
         }
        ]
       },
       "widgets_values": [
-       "wan2.2_bernini_r_low_noise_fp8_scaled.safetensors",
+       "rzgar__Bernini-v2-ComfyUI__wan2.2_bernini_v2_srcFP32_low_noise_int8_convrot.safetensors",
        "default"
       ],
       "title": "저노이즈 편집 모델 · 후반부",

@@ -35,3 +35,11 @@ Cloud 이름은 `소유자__저장소__파일명` 형식입니다. 저장소 이
 - 위 LoRA 중 WAN 3개는 터보를 꺼도 필요합니다. 스위치가 끈 쪽도 Cloud의 실행 전 검사를 통과해야 하기 때문입니다.
 - 모델 라이선스와 A/B 후보는 `2026-11-09_모델_최신확인.md`에 있습니다.
 - 이 목록을 다시 만들려면 `skills/comfyui-workflow/references/클라우드_사실.md`의 2절과 3절을 참고하세요.
+
+## WAN 모델 교체로 추가된 항목 (2026-11-10)
+
+| Cloud 이름 | 다운로드 링크 | 폴더 |
+|---|---|---|
+| `rzgar__Bernini-v2-ComfyUI__wan2.2_bernini_v2_srcFP32_high_noise_int8_convrot.safetensors` | https://huggingface.co/rzgar/Bernini-v2-ComfyUI/resolve/main/Bernini_v2_int8_convrot_src_FP32/wan2.2_bernini_v2_srcFP32_high_noise_int8_convrot.safetensors | diffusion_models |
+| `rzgar__Bernini-v2-ComfyUI__wan2.2_bernini_v2_srcFP32_low_noise_int8_convrot.safetensors` | https://huggingface.co/rzgar/Bernini-v2-ComfyUI/resolve/main/Bernini_v2_int8_convrot_src_FP32/wan2.2_bernini_v2_srcFP32_low_noise_int8_convrot.safetensors | diffusion_models |
+| `lightx2v__Wan21-Distill-Loras__wan2.1_t2v_14b_lora_rank64_lightx2v_4step.safetensors` | https://huggingface.co/lightx2v/Wan2.1-Distill-Loras/resolve/main/wan2.1_t2v_14b_lora_rank64_lightx2v_4step.safetensors | loras |
